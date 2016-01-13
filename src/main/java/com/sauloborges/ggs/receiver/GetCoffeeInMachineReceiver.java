@@ -9,23 +9,35 @@ import java.util.Calendar;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.sauloborges.ggs.entity.Programmer;
+import com.sauloborges.ggs.constants.QueueConstants;
+import com.sauloborges.ggs.domain.Programmer;
+import com.sauloborges.ggs.domain.Statistic;
+import com.sauloborges.ggs.domain.StatisticMap;
+import com.sauloborges.ggs.repository.ProgrammerRepository;
 
 @Component
 public class GetCoffeeInMachineReceiver {
+
+	final static Logger logger = Logger.getLogger(GetCoffeeInMachineReceiver.class);
 
 	private CountDownLatch latch = new CountDownLatch(1);
 
 	@Autowired
 	RabbitTemplate rabbitTemplate;
+	
+	@Autowired
+	StatisticMap stats;
+	
+	@Autowired
+	private ProgrammerRepository programmerRepository;
 
 	public void receiveMessage(Programmer programmer) throws InterruptedException {
-		// System.out.println("Received in a machine to get a coffee: <" +
-		// programmer.getName() + ">");
+		logger.debug("Received in a machine to get a coffee: <" + programmer.getName() + ">");
 		programmer.setTimeLeaveGetTheCoffeeQueue(Calendar.getInstance().getTimeInMillis());
 		programmer.setTimeStartedToGetTheCoffe(Calendar.getInstance().getTimeInMillis());
 
@@ -40,15 +52,22 @@ public class GetCoffeeInMachineReceiver {
 
 		programmer.setTimeFinished(Calendar.getInstance().getTimeInMillis());
 
+		// stats
+		rabbitTemplate.convertAndSend(QueueConstants.STATISTICS_QUEUE,
+				new Statistic("GetCoffeeInMachineReceiver" + Thread.currentThread().getId(), programmer));
+		
+		programmerRepository.save(programmer);
+
 		latch.countDown();
 		StringBuffer sb = new StringBuffer();
-		sb.append("User <" + programmer.getName() + "> got you coffee. ");
+		sb.append("\nUser <" + programmer.getName() + "> got your coffee. ");
 		sb.append("\n\tSpent total: " + calculateTotalTimeSpent(programmer));
 		sb.append("\n\tSpent in the pay queue: " + calculateTimeSpentInPayQueue(programmer));
 		sb.append("\n\tSpent to paid and got a coffee: " + calculateTimeSpentToPaidAndGotACoffee(programmer));
 		sb.append("\n\tSpent in the machine coffee queue: " + calculateTimeSpentInMachineCofffeQueue(programmer));
 		sb.append("\n\tSpent to got the coffee in machine: " + calculateTimeSpentInCoffeeMachine(programmer));
-		System.out.println(sb.toString());
+		logger.info(sb.toString());
+		
 	}
 
 	private String calculateTimeSpentInPayQueue(Programmer programmer) {
@@ -78,10 +97,9 @@ public class GetCoffeeInMachineReceiver {
 
 	private String formatTime(long time) {
 		long minutes = TimeUnit.MILLISECONDS.toMinutes(time);
-		long seconds = TimeUnit.MILLISECONDS.toSeconds(time)
-				- TimeUnit.MINUTES.toSeconds(minutes);
+		long seconds = TimeUnit.MILLISECONDS.toSeconds(time) - TimeUnit.MINUTES.toSeconds(minutes);
 		long mili = (time % 1000);
-		
+
 		String formatedTime = String.format("%02d min, %02d sec, %03d mili", minutes, seconds, mili);
 		return formatedTime;
 	}

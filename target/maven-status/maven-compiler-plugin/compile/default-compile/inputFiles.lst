@@ -1,0 +1,16 @@
+/Users/sauloborges/Projetos/coffeesystem/src/main/java/com/sauloborges/ggs/entity/StatisticEntity.java
+/Users/sauloborges/Projetos/coffeesystem/src/main/java/com/sauloborges/ggs/QueueApplicationConfiguration.java
+/Users/sauloborges/Projetos/coffeesystem/src/main/java/com/sauloborges/ggs/constants/QueueConstants.java
+/Users/sauloborges/Projetos/coffeesystem/src/main/java/com/sauloborges/ggs/ExternalConfigComponent.java
+/Users/sauloborges/Projetos/coffeesystem/src/main/java/com/sauloborges/ggs/receiver/ChooseCoffeeReceiver.java
+/Users/sauloborges/Projetos/coffeesystem/src/main/java/com/sauloborges/ggs/receiver/GetCoffeeInMachineReceiver.java
+/Users/sauloborges/Projetos/coffeesystem/src/main/java/com/sauloborges/ggs/receiver/StatisticsReceiver.java
+/Users/sauloborges/Projetos/coffeesystem/src/main/java/com/sauloborges/ggs/entity/Times.java
+/Users/sauloborges/Projetos/coffeesystem/src/main/java/com/sauloborges/ggs/entity/StatisticMap.java
+/Users/sauloborges/Projetos/coffeesystem/src/main/java/com/sauloborges/ggs/entity/Programmer.java
+/Users/sauloborges/Projetos/coffeesystem/src/main/java/com/sauloborges/ggs/Application.java
+/Users/sauloborges/Projetos/coffeesystem/src/main/java/com/sauloborges/ggs/StatisticsComponent.java
+/Users/sauloborges/Projetos/coffeesystem/src/main/java/com/sauloborges/ggs/constants/TimeConstants.java
+/Users/sauloborges/Projetos/coffeesystem/src/main/java/com/sauloborges/ggs/receiver/PayCoffeeReceiver.java
+/Users/sauloborges/Projetos/coffeesystem/src/main/java/com/sauloborges/ggs/entity/CoffeType.java
+/Users/sauloborges/Projetos/coffeesystem/src/main/java/com/sauloborges/ggs/entity/PaymenthMethod.java

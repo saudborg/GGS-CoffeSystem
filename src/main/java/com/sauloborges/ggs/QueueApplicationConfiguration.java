@@ -3,6 +3,7 @@ package com.sauloborges.ggs;
 import static com.sauloborges.ggs.constants.QueueConstants.CHOOSE_COFFEE_QUEUE;
 import static com.sauloborges.ggs.constants.QueueConstants.GET_COFFEE_IN_MACHINE_QUEUE;
 import static com.sauloborges.ggs.constants.QueueConstants.PAY_COFFEE_QUEUE;
+import static com.sauloborges.ggs.constants.QueueConstants.STATISTICS_QUEUE;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -17,6 +18,7 @@ import org.springframework.context.annotation.Configuration;
 import com.sauloborges.ggs.receiver.ChooseCoffeeReceiver;
 import com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver;
 import com.sauloborges.ggs.receiver.PayCoffeeReceiver;
+import com.sauloborges.ggs.receiver.StatisticsReceiver;
 
 @Configuration
 public class QueueApplicationConfiguration {
@@ -35,6 +37,12 @@ public class QueueApplicationConfiguration {
 	Queue getCoffeInMachineQueue() {
 		return new Queue(GET_COFFEE_IN_MACHINE_QUEUE, false);
 	}
+	
+	@Bean
+	Queue statisticsQueue() {
+		return new Queue(STATISTICS_QUEUE, false);
+	}
+
 
 	@Bean
 	TopicExchange exchange() {
@@ -54,6 +62,11 @@ public class QueueApplicationConfiguration {
 	@Bean
 	Binding bindingGetCoffeInMachine(TopicExchange exchange) {
 		return BindingBuilder.bind(getCoffeInMachineQueue()).to(exchange).with(GET_COFFEE_IN_MACHINE_QUEUE);
+	}
+	
+	@Bean
+	Binding bindingStatistics(TopicExchange exchange) {
+		return BindingBuilder.bind(statisticsQueue()).to(exchange).with(STATISTICS_QUEUE);
 	}
 
 	@Bean
@@ -88,6 +101,15 @@ public class QueueApplicationConfiguration {
 		container.setMessageListener(new MessageListenerAdapter(getCoffeeInMachine(), "receiveMessage"));
 		return container;
 	}
+	
+	@Bean
+	SimpleMessageListenerContainer containerStatistics(ConnectionFactory connectionFactory) {
+		SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
+		container.setConnectionFactory(connectionFactory);
+		container.setQueueNames(STATISTICS_QUEUE);
+		container.setMessageListener(new MessageListenerAdapter(statisticReceiver(), "receiveMessage"));
+		return container;
+	}
 
 	@Bean
 	ChooseCoffeeReceiver chooseCoffee() {
@@ -102,6 +124,11 @@ public class QueueApplicationConfiguration {
 	@Bean
 	GetCoffeeInMachineReceiver getCoffeeInMachine() {
 		return new GetCoffeeInMachineReceiver();
+	}
+	
+	@Bean
+	StatisticsReceiver statisticReceiver(){
+		return new StatisticsReceiver();
 	}
 
 }
