@@ -7,10 +7,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.sauloborges.ggs.domain.CoffeType;
+import com.sauloborges.ggs.domain.CoffeeType;
 import com.sauloborges.ggs.domain.PaymenthMethod;
 import com.sauloborges.ggs.domain.Programmer;
 import com.sauloborges.ggs.domain.Statistic;
+import com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver;
 import com.sauloborges.ggs.repository.ProgrammerRepository;
 import com.sauloborges.ggs.repository.StatisticRepository;
 
@@ -55,8 +56,8 @@ public class StatisticsComponent {
 
 	public String howMuchCoffeIsDispensedByEachCoffeeMachine() {
 
-		List<String> listNameMachine = statisticRepository.getListNameMachine("GetCoffeeInMachineReceiver");
-		List<Statistic> list = statisticRepository.findStatisticByMachine("GetCoffeeInMachineReceiver");
+		List<String> listNameMachine = statisticRepository.getListNameMachine(GetCoffeeInMachineReceiver.class.getName());
+		List<Statistic> list = statisticRepository.findStatisticByMachine(GetCoffeeInMachineReceiver.class.getName());
 
 		String nameMachine1 = listNameMachine.get(0);
 
@@ -74,18 +75,18 @@ public class StatisticsComponent {
 		for (Statistic statistic : list) {
 			if (statistic.getMachine().equals(nameMachine1)) {
 				coffeeMachine1Total++;
-				if (statistic.getProgrammer().getCoffeType().equals(CoffeType.ESPRESSO)) {
+				if (statistic.getProgrammer().getCoffeType().equals(CoffeeType.ESPRESSO)) {
 					coffeeMachine1Espresso++;
-				} else if (statistic.getProgrammer().getCoffeType().equals(CoffeType.CAPPUCCINO)) {
+				} else if (statistic.getProgrammer().getCoffeType().equals(CoffeeType.CAPPUCCINO)) {
 					coffeeMachine1Cappuccino++;
 				} else {
 					coffeeMachine1Latte++;
 				}
 			} else {
 				coffeeMachine2Total++;
-				if (statistic.getProgrammer().getCoffeType().equals(CoffeType.ESPRESSO)) {
+				if (statistic.getProgrammer().getCoffeType().equals(CoffeeType.ESPRESSO)) {
 					coffeeMachine2Espresso++;
-				} else if (statistic.getProgrammer().getCoffeType().equals(CoffeType.CAPPUCCINO)) {
+				} else if (statistic.getProgrammer().getCoffeType().equals(CoffeeType.CAPPUCCINO)) {
 					coffeeMachine2Cappuccino++;
 				} else {
 					coffeeMachine2Latte++;

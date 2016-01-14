@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.sauloborges.ggs.constants.QueueConstants;
-import com.sauloborges.ggs.domain.CoffeType;
+import com.sauloborges.ggs.domain.CoffeeType;
 import com.sauloborges.ggs.domain.Programmer;
 import com.sauloborges.ggs.domain.Statistic;
 import com.sauloborges.ggs.repository.ProgrammerRepository;
@@ -35,7 +35,7 @@ public class ChooseCoffeeReceiver {
 		programmer.setTimeStarted(Calendar.getInstance().getTimeInMillis());
 
 		Thread.sleep(CHOOSING_TYPE_COFFEE);
-		programmer.setCoffeType(CoffeType.getARandomCoffe());
+		programmer.setCoffeType(CoffeeType.getARandomCoffe());
 
 		programmer.setTimeEnterPayQueue(Calendar.getInstance().getTimeInMillis());
 

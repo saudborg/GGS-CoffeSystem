@@ -17,7 +17,7 @@ public class Programmer implements Serializable {
 
 	private String name;
 
-	private CoffeType coffeType;
+	private CoffeeType coffeType;
 
 	private PaymenthMethod paymenthMethod;
 
@@ -45,11 +45,11 @@ public class Programmer implements Serializable {
 		this.paymenthMethod = PaymenthMethod.getARandomPaymenthMethod();
 	}
 
-	public CoffeType getCoffeType() {
+	public CoffeeType getCoffeType() {
 		return coffeType;
 	}
 
-	public void setCoffeType(CoffeType coffeType) {
+	public void setCoffeType(CoffeeType coffeType) {
 		this.coffeType = coffeType;
 	}
 

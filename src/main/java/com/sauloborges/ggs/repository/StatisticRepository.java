@@ -13,6 +13,6 @@ public interface StatisticRepository extends JpaRepository<Statistic, Integer> {
 	@Query("SELECT s FROM Statistic s where s.machine like %:nameMachine%")
 	public List<Statistic> findStatisticByMachine(@Param("nameMachine") String name);
 	
-	@Query("SELECT DISTINCT(s.machine) FROM Statistic s where s.machine like %:nameMachine%")
+	@Query("SELECT DISTINCT(s.machine) FROM Statistic s where s.machine like :nameMachine%")
 	public List<String> getListNameMachine(@Param("nameMachine") String name);
 }

@@ -17,7 +17,7 @@ public class ExternalConfigComponent {
 	
 	@Value("${time.programmer.details.console}")
 	private boolean showDetailsInConsole;
-
+	
 	@PostConstruct
 	public void postConstruct() {
 		logger.debug("Programmers: " + getProgrammers());
