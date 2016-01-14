@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "programmers",
+    "type": "java.lang.Integer",
+    "description": "Number of 'programmers' that are going to get a coffe"
+  },
+  {
+    "name": "time.programmer.details.console",
+    "type": "java.lang.Boolean",
+    "description": "If you would like to print details about each programmer in console"
+  }
+]}

@@ -1,7 +1,8 @@
 package com.sauloborges.ggs;
 
+import static com.sauloborges.ggs.util.Utils.formatTime;
+
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -10,7 +11,6 @@ import com.sauloborges.ggs.domain.CoffeType;
 import com.sauloborges.ggs.domain.PaymenthMethod;
 import com.sauloborges.ggs.domain.Programmer;
 import com.sauloborges.ggs.domain.Statistic;
-import com.sauloborges.ggs.domain.StatisticMap;
 import com.sauloborges.ggs.repository.ProgrammerRepository;
 import com.sauloborges.ggs.repository.StatisticRepository;
 
@@ -18,13 +18,12 @@ import com.sauloborges.ggs.repository.StatisticRepository;
 public class StatisticsComponent {
 
 	@Autowired
-	StatisticMap stats;
-
-	@Autowired
 	private StatisticRepository statisticRepository;
 
 	@Autowired
 	private ProgrammerRepository programmerRepository;
+	
+	private boolean statsDone = false;
 
 	public String howMuchCoffeIsSold() {
 		int totalCoffeSold = 0;
@@ -42,12 +41,13 @@ public class StatisticsComponent {
 		}
 
 		StringBuffer sb = new StringBuffer();
-		sb.append("\n##################################################\n");
-		sb.append("How much coffee is sold? (Total and per payment type)\n");
+		sb.append("\n\n########################################################################");
+		sb.append("\nHow much coffee is sold? (Total and per payment type)\n");
+		sb.append("_________________________________________________________________________");
 		sb.append("\nTotal Coffee Sold: " + totalCoffeSold);
 		sb.append("\nTotal Coffee Paid In Cash: " + totalPaidInCash);
 		sb.append("\nTotal Coffee Paid In Card: " + totalPaidInCard);
-		sb.append("\n##################################################\n");
+		sb.append("\n\n########################################################################\n");
 
 		return sb.toString();
 
@@ -94,8 +94,9 @@ public class StatisticsComponent {
 		}
 
 		StringBuffer sb = new StringBuffer();
-		sb.append("\n##################################################\n");
-		sb.append("How much coffe is dispensed by each coffee machine (total and per type)\n");
+		sb.append("\n\n########################################################################");
+		sb.append("\nHow much coffe is dispensed by each coffee machine (total and per type)\n");
+		sb.append("_________________________________________________________________________");
 		sb.append("\n Machine 1: \t TOTAL = " + coffeeMachine1Total);
 		sb.append("\n\t\t ESPRESSO = " + coffeeMachine1Espresso);
 		sb.append("\n\t\t CAPPUCCINO = " + coffeeMachine1Cappuccino);
@@ -105,8 +106,8 @@ public class StatisticsComponent {
 		sb.append("\n\t\t ESPRESSO = " + coffeeMachine2Espresso);
 		sb.append("\n\t\t CAPPUCCINO = " + coffeeMachine2Cappuccino);
 		sb.append("\n\t\t LATTE = " + coffeeMachine2Latte);
-		sb.append("\n##################################################\n");
-
+		sb.append("\n\n########################################################################\n");
+		
 		return sb.toString();
 	}
 
@@ -133,15 +134,16 @@ public class StatisticsComponent {
 		}
 
 		StringBuffer sb = new StringBuffer();
-		sb.append("##################################################\n");
-		sb.append("How much time does the average programmer spend getting her coffe\n");
+		sb.append("\n\n########################################################################");
+		sb.append("\nHow much time does the average programmer spend getting her coffe\n");
+		sb.append("_________________________________________________________________________");
 		sb.append("\nAverage: " + formatTime(total / size));
 		sb.append("\nAverage in pay queue: " + formatTime(spentInPayQueue / size));
 		sb.append("\nAverage in paid and got a coffee: " + formatTime(spentToPaidAndGotACoffee / size));
 		sb.append("\nAverage in the machine coffee queue: " + formatTime(spentInMachineCoffeeQueue / size));
 		sb.append("\nAverage to got the coffee in machine: " + formatTime(spentInCoffeeMachine / size));
-		sb.append("\n\n##################################################\n");
-
+		sb.append("\n\n########################################################################\n");
+		
 		return sb.toString();
 	}
 
@@ -187,8 +189,9 @@ public class StatisticsComponent {
 		}
 
 		StringBuffer sb = new StringBuffer();
-		sb.append("##################################################\n");
-		sb.append("How long did it take the fastest and the slowest programmer to get her coffee\n");
+		sb.append("\n\n########################################################################");
+		sb.append("\nHow long did it take the fastest and the slowest programmer to get her coffee\n");
+		sb.append("_________________________________________________________________________");
 		sb.append("\n Fastest Programmer: ");
 		sb.append("\n\t\t name: " + fastestGeral.getName());
 		sb.append("\n\t\t coffe: " + fastestGeral.getCoffeType());
@@ -200,20 +203,18 @@ public class StatisticsComponent {
 		sb.append("\n\t\t coffe: " + slowestGeral.getCoffeType());
 		sb.append("\n\t\t paymenth method: " + slowestGeral.getPaymenthMethod());
 		sb.append("\n\t\t time: " + formatTime(timeSlowest));
-		sb.append("\n##################################################\n");
-
+		sb.append("\n\n########################################################################\n");
 
 		return sb.toString();
 
 	}
 
-	private String formatTime(long time) {
-		long minutes = TimeUnit.MILLISECONDS.toMinutes(time);
-		long seconds = TimeUnit.MILLISECONDS.toSeconds(time) - TimeUnit.MINUTES.toSeconds(minutes);
-		long mili = (time % 1000);
+	public boolean isStatsDone() {
+		return statsDone;
+	}
 
-		String formatedTime = String.format("%02d min, %02d sec, %03d mili", minutes, seconds, mili);
-		return formatedTime;
+	public void setStatsDone(boolean statsDone) {
+		this.statsDone = statsDone;
 	}
 
 }

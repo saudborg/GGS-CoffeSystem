@@ -6,7 +6,6 @@ public class TimeConstants {
 	public static final Integer QUARTER_SECOND = 250; // 0.25 Seconds
 	public static final Integer TREE_QUARTER_SECOND = 750; // 0.75 Seconds
 	
-	
 	public static final Integer CHOOSING_TYPE_COFFEE = HALF_SECOND;
 	public static final Integer FINDING_A_CUP = QUARTER_SECOND;
 	public static final Integer PUTTING_INTO_OUTLET = QUARTER_SECOND;

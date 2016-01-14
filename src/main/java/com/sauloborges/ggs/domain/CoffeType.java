@@ -22,6 +22,14 @@ public enum CoffeType {
 	private String type;
 
 	private Integer time;
+	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
 	public Integer getTime() {
 		return time;
@@ -29,6 +37,10 @@ public enum CoffeType {
 
 	public String getType() {
 		return type;
+	}
+	
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	private CoffeType(Integer id, String type, Integer time) {
@@ -39,14 +51,6 @@ public enum CoffeType {
 
 	public static CoffeType getARandomCoffe() {
 		return VALUES.get(RANDOM.nextInt(VALUES.size()));
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
 	}
 
 }

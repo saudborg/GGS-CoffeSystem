@@ -8,18 +8,15 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
 
 import com.sauloborges.ggs.constants.QueueConstants;
+import com.sauloborges.ggs.constants.TimeConstants;
 import com.sauloborges.ggs.domain.Programmer;
-import com.sauloborges.ggs.domain.StatisticMap;
 
-//@EnableJpaRepositories("com.sauloborges.ggs.repository.*")
 @SpringBootApplication
 public class Application implements CommandLineRunner {
 
-	 private static final Logger logger = LoggerFactory.getLogger(Application.class);
-
+	private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
 	@Autowired
 	RabbitTemplate rabbitTemplate;
@@ -32,14 +29,9 @@ public class Application implements CommandLineRunner {
 
 	@Autowired
 	StatisticsComponent statisticsComponent;
-	
+
 	@Autowired
 	ExternalConfigComponent config;
-
-	@Bean
-	StatisticMap stats() {
-		return new StatisticMap();
-	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
@@ -47,14 +39,19 @@ public class Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... arg0) throws Exception {
-		logger.info("Starting the application");
-		
+		logger.info("Starting the application for " + config.getProgrammers() + " programmers");
+		System.out.println("Starting the application for " + config.getProgrammers() + " programmers");
+
 		for (int i = 1; i <= config.getProgrammers(); i++) {
 			Programmer programmer = new Programmer("Programmer " + i);
 			rabbitTemplate.convertAndSend(QueueConstants.CHOOSE_COFFEE_QUEUE, programmer);
 		}
 
-		while (stats().total < config.getProgrammers() * 3) {
+		while (statisticsComponent.isStatsDone() == false) {
+			// Waiting
+			Thread.sleep(TimeConstants.HALF_SECOND);
+			if(!config.showDetailsInConsole())
+				System.out.print(".");
 		}
 
 		System.out.println(statisticsComponent.howMuchCoffeIsSold());
