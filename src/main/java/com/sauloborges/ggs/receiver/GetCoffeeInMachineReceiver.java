@@ -66,7 +66,7 @@ public class GetCoffeeInMachineReceiver {
 		sb.append("\n\tSpent to paid and got a coffee: " + calculateTimeSpentToPaidAndGotACoffee(programmer));
 		sb.append("\n\tSpent in the machine coffee queue: " + calculateTimeSpentInMachineCofffeQueue(programmer));
 		sb.append("\n\tSpent to got the coffee in machine: " + calculateTimeSpentInCoffeeMachine(programmer));
-		logger.info(sb.toString());
+//		logger.info(sb.toString());
 		
 	}
 

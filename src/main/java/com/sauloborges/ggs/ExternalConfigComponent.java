@@ -12,20 +12,20 @@ public class ExternalConfigComponent {
 
 	private static Logger logger = LoggerFactory.getLogger(ExternalConfigComponent.class);
 	
-	@Value("${property.one}")
-	private String propertyOne;
-
-	@Value("${property.two}")
-	private String propertyTwo;
-
-	@Value("${property.three}")
-	private String propertyThree;
+	@Value("${programmers}")
+	private Integer programmers;
 
 	@PostConstruct
 	public void postConstruct() {
-		logger.info("Property One: " + propertyOne);
-		logger.info("Property Two: " + propertyTwo);
-		logger.info("Property Three: " + propertyThree);
+		logger.info("Programmers: " + getProgrammers());
+	}
+
+	public Integer getProgrammers() {
+		return programmers;
+	}
+
+	public void setProgrammers(Integer programmers) {
+		this.programmers = programmers;
 	}
 
 }
