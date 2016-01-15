@@ -7,6 +7,11 @@ import java.util.Random;
 
 import static com.sauloborges.ggs.constants.TimeConstants.*;
 
+/**
+ * Class represent the method that the programmer will pay a coffee. Contains the name and how long it takes
+ * @author sauloborges
+ *
+ */
 public enum PaymenthMethod {
 
 	CASH(1, "Cash", QUARTER_SECOND), //
@@ -48,6 +53,10 @@ public enum PaymenthMethod {
 		this.type = type;
 	}
 
+	/**
+	 * Method will return a random payment method present in the list
+	 * @return
+	 */
 	public static PaymenthMethod getARandomPaymenthMethod() {
 		return VALUES.get(RANDOM.nextInt(VALUES.size()));
 	}

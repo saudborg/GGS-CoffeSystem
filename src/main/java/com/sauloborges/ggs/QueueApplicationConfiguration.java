@@ -20,29 +20,51 @@ import com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver;
 import com.sauloborges.ggs.receiver.PayCoffeeReceiver;
 import com.sauloborges.ggs.receiver.StatisticsReceiver;
 
+/**
+ * Class loaded by Spring to configure all the Queues that the system use
+ * 
+ * @author sauloborges
+ *
+ */
 @Configuration
 public class QueueApplicationConfiguration {
 
+	/**
+	 * Queue to waiting to go to machine to choose which coffee
+	 * 
+	 * @return
+	 */
 	@Bean
 	Queue chooseCoffeeQueue() {
 		return new Queue(CHOOSE_COFFEE_QUEUE, false);
 	}
 
+	/**
+	 * Queue to waiting to go to machine to pay a coffee 
+	 * @return
+	 */
 	@Bean
 	Queue payCoffeeQueue() {
 		return new Queue(PAY_COFFEE_QUEUE, false);
 	}
 
+	/**
+	 * Queue to waiting to go to machine to get your coffee
+	 * @return
+	 */
 	@Bean
 	Queue getCoffeInMachineQueue() {
 		return new Queue(GET_COFFEE_IN_MACHINE_QUEUE, false);
 	}
-	
+
+	/**
+	 * Queue to waiting to save the information about which machine (thread) programmer passed
+	 * @return
+	 */
 	@Bean
 	Queue statisticsQueue() {
 		return new Queue(STATISTICS_QUEUE, false);
 	}
-
 
 	@Bean
 	TopicExchange exchange() {
@@ -63,7 +85,7 @@ public class QueueApplicationConfiguration {
 	Binding bindingGetCoffeInMachine(TopicExchange exchange) {
 		return BindingBuilder.bind(getCoffeInMachineQueue()).to(exchange).with(GET_COFFEE_IN_MACHINE_QUEUE);
 	}
-	
+
 	@Bean
 	Binding bindingStatistics(TopicExchange exchange) {
 		return BindingBuilder.bind(statisticsQueue()).to(exchange).with(STATISTICS_QUEUE);
@@ -74,6 +96,7 @@ public class QueueApplicationConfiguration {
 		SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
 		container.setConnectionFactory(connectionFactory);
 		container.setQueueNames(CHOOSE_COFFEE_QUEUE);
+		// Maximum machine number specified in the challenge for choose a coffee
 		container.setMaxConcurrentConsumers(10);
 		container.setConcurrentConsumers(10);
 		container.setMessageListener(new MessageListenerAdapter(chooseCoffee(), "receiveMessage"));
@@ -85,6 +108,7 @@ public class QueueApplicationConfiguration {
 		SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
 		container.setConnectionFactory(connectionFactory);
 		container.setQueueNames(PAY_COFFEE_QUEUE);
+		// Maximum machine number specified in the challenge for pay a coffee
 		container.setMaxConcurrentConsumers(5);
 		container.setConcurrentConsumers(5);
 		container.setMessageListener(new MessageListenerAdapter(payCoffee(), "receiveMessage"));
@@ -95,13 +119,14 @@ public class QueueApplicationConfiguration {
 	SimpleMessageListenerContainer containerGetCoffeeInMachine(ConnectionFactory connectionFactory) {
 		SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
 		container.setConnectionFactory(connectionFactory);
+		// Maximum machine number specified in the challenge to get a coffee
 		container.setQueueNames(GET_COFFEE_IN_MACHINE_QUEUE);
 		container.setMaxConcurrentConsumers(2);
 		container.setConcurrentConsumers(2);
 		container.setMessageListener(new MessageListenerAdapter(getCoffeeInMachine(), "receiveMessage"));
 		return container;
 	}
-	
+
 	@Bean
 	SimpleMessageListenerContainer containerStatistics(ConnectionFactory connectionFactory) {
 		SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
@@ -125,9 +150,9 @@ public class QueueApplicationConfiguration {
 	GetCoffeeInMachineReceiver getCoffeeInMachine() {
 		return new GetCoffeeInMachineReceiver();
 	}
-	
+
 	@Bean
-	StatisticsReceiver statisticReceiver(){
+	StatisticsReceiver statisticReceiver() {
 		return new StatisticsReceiver();
 	}
 

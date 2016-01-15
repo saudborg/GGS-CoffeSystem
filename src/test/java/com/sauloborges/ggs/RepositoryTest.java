@@ -12,6 +12,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.sauloborges.ggs.domain.CoffeeType;
@@ -21,8 +22,18 @@ import com.sauloborges.ggs.domain.Statistic;
 import com.sauloborges.ggs.repository.ProgrammerRepository;
 import com.sauloborges.ggs.repository.StatisticRepository;
 
+/**
+ * This class represent the repository tests. If the system is working corretly,
+ * saving, reading.
+ * 
+ * The configurations in this tests will be read in the test.properties instead application.context
+ * 
+ * @author sauloborges
+ *
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = { Application.class })
+@TestPropertySource(locations = "classpath:test.properties")
 public class RepositoryTest {
 
 	private ProgrammerRepository programmerRepository;
@@ -39,6 +50,29 @@ public class RepositoryTest {
 		this.statisticRepository = statisticRepository;
 	}
 
+	/**
+	 * Create a Programmer that you could use in tests
+	 * 
+	 * @param name
+	 * @return
+	 */
+	private Programmer createAProgrammer(String name) {
+		Programmer programmer = new Programmer(name);
+		programmer.setCoffeType(CoffeeType.CAPPUCCINO);
+		programmer.setPaymenthMethod(PaymenthMethod.CASH);
+		programmer.setTimeStarted(Calendar.getInstance().getTimeInMillis());
+
+		assertNull(programmer.getId());
+		programmerRepository.save(programmer);
+		assertNotNull(programmer.getId());
+		return programmer;
+	}
+
+	/**
+	 * Test a persistence to save a Entity Programmer
+	 * 
+	 * @throws Exception
+	 */
 	@Test
 	public void testSaveProgrammer() throws Exception {
 		Programmer programmer = createAProgrammer("Test 1");
@@ -54,18 +88,9 @@ public class RepositoryTest {
 
 	}
 
-	private Programmer createAProgrammer(String name) {
-		Programmer programmer = new Programmer(name);
-		programmer.setCoffeType(CoffeeType.CAPPUCCINO);
-		programmer.setPaymenthMethod(PaymenthMethod.CASH);
-		programmer.setTimeStarted(Calendar.getInstance().getTimeInMillis());
-
-		assertNull(programmer.getId());
-		programmerRepository.save(programmer);
-		assertNotNull(programmer.getId());
-		return programmer;
-	}
-
+	/**
+	 * Test a persistence to save a Entity Statistic
+	 */
 	@Test
 	public void testSaveStatistic() {
 		Programmer programmer = createAProgrammer("Test 1");
@@ -84,6 +109,13 @@ public class RepositoryTest {
 		assertEquals(programmer.getId(), baseStatistic.getProgrammer().getId());
 	}
 
+	/**
+	 * Test the relation between Statistics and Programmer. If the system is
+	 * saving corretly
+	 * 
+	 * Test the method @StatisticRepository.findStatisticByMachine with it is
+	 * filtering by correct thread (machine)
+	 */
 	@Test
 	public void testLoadStatistic() {
 		String nameMachine = "MachineTest 1";
@@ -111,6 +143,10 @@ public class RepositoryTest {
 
 	}
 
+	/**
+	 * Test the method @StatisticRepository.getListNameMachine. If it is getting
+	 * only statistics same machine
+	 */
 	@Test
 	public void testNameMachines() {
 		String nameMachine = "MachineTest 1";

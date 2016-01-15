@@ -17,6 +17,16 @@ import com.sauloborges.ggs.domain.Programmer;
 import com.sauloborges.ggs.domain.Statistic;
 import com.sauloborges.ggs.repository.ProgrammerRepository;
 
+/**
+ * This class represent the first machine in challenge. Where the programmer:
+ * 
+ * First gather information regarding which types of coffee are available
+ * (espresso, latte macchiato or cappuccino) and pick their personal favorite.
+ * This will take 0.5 seconds.
+ * 
+ * @author sauloborges
+ *
+ */
 @Component
 public class ChooseCoffeeReceiver {
 
@@ -39,14 +49,15 @@ public class ChooseCoffeeReceiver {
 
 		programmer.setTimeEnterPayQueue(Calendar.getInstance().getTimeInMillis());
 
-		// save programmer
+		// save programmer after record you time that he will enter in a queue
 		Programmer saved = programmerRepository.save(programmer);
 		logger.debug("Programmer saved id: " + saved.getId());
 		programmer = saved;
 
+		// Send to a queue to pay for you coffee
 		rabbitTemplate.convertAndSend(QueueConstants.PAY_COFFEE_QUEUE, programmer);
 
-		// send to queue to collect stats
+		// send to a queue to collect stats
 		String machine = ChooseCoffeeReceiver.class.getName() + Thread.currentThread().getId();
 		rabbitTemplate.convertAndSend(QueueConstants.STATISTICS_QUEUE, new Statistic(machine, programmer));
 

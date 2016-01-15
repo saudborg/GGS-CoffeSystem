@@ -13,6 +13,15 @@ import com.sauloborges.ggs.constants.QueueConstants;
 import com.sauloborges.ggs.domain.Programmer;
 import com.sauloborges.ggs.domain.Statistic;
 
+/**
+ * This class represent the second machine in challenge. Where the programmer:
+ * 
+ * Pay the coffee they want at the cash register using cash or credit. This will
+ * take 0.25 second for credit and 0.5 seconds for cash payments.
+ * 
+ * @author sauloborges
+ *
+ */
 @Component
 public class PayCoffeeReceiver {
 
@@ -25,14 +34,16 @@ public class PayCoffeeReceiver {
 
 	public void receiveMessage(Programmer programmer) throws InterruptedException {
 		logger.debug("Received in pay queue:  <" + programmer.getName() + ">");
-
+		// Set the time that the programmer leaves the queue and can pay
 		programmer.setTimeLeavePayQueue(Calendar.getInstance().getTimeInMillis());
 
+		// Get the payment method and how long it is takes
 		Integer timeSpentByPaymenthMethod = programmer.getPaymenthMethod().getTime();
 		Thread.sleep(timeSpentByPaymenthMethod);
 
+		// Set the time that the programmer paid for your coffee and the time he
+		// enters in a queue to get your coffee
 		programmer.setTimePaid(Calendar.getInstance().getTimeInMillis());
-
 		programmer.setTimeEnterGetTheCoffeeQueue(Calendar.getInstance().getTimeInMillis());
 		rabbitTemplate.convertAndSend(QueueConstants.GET_COFFEE_IN_MACHINE_QUEUE, programmer);
 

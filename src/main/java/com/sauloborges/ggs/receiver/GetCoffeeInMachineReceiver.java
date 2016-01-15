@@ -19,12 +19,26 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.sauloborges.ggs.ExternalConfigComponent;
+import com.sauloborges.ggs.component.ExternalConfigComponent;
 import com.sauloborges.ggs.constants.QueueConstants;
 import com.sauloborges.ggs.domain.Programmer;
 import com.sauloborges.ggs.domain.Statistic;
 import com.sauloborges.ggs.repository.ProgrammerRepository;
 
+/**
+ * This class represent the third machine in challenge. Where the programmer:
+ * 
+ * Pick the type of coffee they paid for.
+ * 
+ * - find a cup (0.25 seconds)
+ * - put it under the outlet (0.25 seconds)
+ * - pick the type of coffee the programmer paid (0.25 seconds)
+ * - wait till the machine is finished filling the cup 
+ * - when the machine is done the programmer will take her cup and leave (0.25 seconds)
+ * 
+ * @author sauloborges
+ *
+ */
 @Component
 public class GetCoffeeInMachineReceiver {
 
@@ -43,6 +57,7 @@ public class GetCoffeeInMachineReceiver {
 
 	public void receiveMessage(Programmer programmer) throws InterruptedException {
 		logger.debug("Received in a machine to get a coffee: <" + programmer.getName() + ">");
+		// Set the times that the programmer leaves the queue and starts to get your coffee
 		programmer.setTimeLeaveGetTheCoffeeQueue(Calendar.getInstance().getTimeInMillis());
 		programmer.setTimeStartedToGetTheCoffe(Calendar.getInstance().getTimeInMillis());
 
@@ -55,6 +70,7 @@ public class GetCoffeeInMachineReceiver {
 
 		Thread.sleep(GETTING_THE_CUP);
 
+		// Set the time that the programmer pick your coffee
 		programmer.setTimeFinished(Calendar.getInstance().getTimeInMillis());
 
 		// send to queue to collect stats
@@ -69,6 +85,10 @@ public class GetCoffeeInMachineReceiver {
 
 	}
 
+	/**
+	 * Method to print time details about how long the programmer spent in each stage
+	 * @param programmer
+	 */
 	private void prettyPrint(Programmer programmer) {
 		StringBuffer sb = new StringBuffer();
 		sb.append("\nUser <" + programmer.getName() + "> got your coffee. ");
@@ -79,6 +99,7 @@ public class GetCoffeeInMachineReceiver {
 		sb.append("\n\tSpent to got the coffee in machine: " + calculateTimeSpentInCoffeeMachine(programmer));
 		logger.info(sb.toString());
 
+		// Show in console this details if in application.context the variable is true
 		if (externalConfigComponent.showDetailsInConsole())
 			System.out.println(sb.toString());
 	}

@@ -7,6 +7,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+/**
+ * Class represents a statistic.
+ * Save a programmer and your times and which machine he passed
+ * @author sauloborges
+ *
+ */
 @Entity
 public class Statistic implements Serializable {
 

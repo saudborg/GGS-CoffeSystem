@@ -7,6 +7,12 @@ import java.util.Random;
 
 import static com.sauloborges.ggs.constants.TimeConstants.*;
 
+/**
+ * Class represents one Coffee. Your type and how long it takes to be done
+ * 
+ * @author sauloborges
+ *
+ */
 public enum CoffeeType {
 
 	ESPRESSO(1, "Espresso", QUARTER_SECOND), //
@@ -49,6 +55,10 @@ public enum CoffeeType {
 		this.type = type;
 	}
 
+	/**
+	 * Method will return a random coffee present in the list
+	 * @return
+	 */
 	public static CoffeeType getARandomCoffe() {
 		return VALUES.get(RANDOM.nextInt(VALUES.size()));
 	}

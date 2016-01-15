@@ -4,8 +4,18 @@ import java.util.concurrent.TimeUnit;
 
 import com.sauloborges.ggs.domain.Programmer;
 
+/**
+ * Class with utils methods to use in the system
+ * @author sauloborges
+ *
+ */
 public class Utils {
 
+	/**
+	 * Format a long time in a time like 00min, 07 sec, 103mili
+	 * @param time
+	 * @return
+	 */
 	public static String formatTime(long time) {
 		long minutes = TimeUnit.MILLISECONDS.toMinutes(time);
 		long seconds = TimeUnit.MILLISECONDS.toSeconds(time) - TimeUnit.MINUTES.toSeconds(minutes);
