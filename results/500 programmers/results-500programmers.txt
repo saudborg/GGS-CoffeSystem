@@ -1,0 +1,54 @@
+Starting the application for 500 programmers
+
+########################################################################
+
+How much coffee is sold? (Total and per payment type)
+_________________________________________________________________________
+Total Coffee Sold: 500
+Total Coffee Paid In Cash: 246
+Total Coffee Paid In Card: 254
+
+
+########################################################################
+
+How much coffe is dispensed by each coffee machine (total and per type)
+_________________________________________________________________________
+ Machine 1: 	 TOTAL = 249
+		 ESPRESSO = 81
+		 CAPPUCCINO = 99
+		 LATTE = 69
+
+ Machine 2: 	 TOTAL = 251
+		 ESPRESSO = 82
+		 CAPPUCCINO = 91
+		 LATTE = 78
+
+
+########################################################################
+
+How much time does the average programmer spend getting her coffe
+_________________________________________________________________________
+Average: 02 min, 59 sec, 511 mili
+Average in pay queue: 00 min, 06 sec, 195 mili
+Average in paid and got a coffee: 02 min, 52 sec, 433 mili
+Average in the machine coffee queue: 02 min, 50 sec, 906 mili
+Average to got the coffee in machine: 00 min, 01 sec, 527 mili
+
+
+
+########################################################################
+
+How long did it take the fastest and the slowest programmer to get her coffee
+_________________________________________________________________________
+ Fastest Programmer: 
+		 name: Programmer 1
+		 coffe: ESPRESSO
+		 paymenth method: CASH
+		 time: 00 min, 02 sec, 087 mili
+
+ Slowest Programmer: 
+		 name: Programmer 500
+		 coffe: ESPRESSO
+		 paymenth method: CREDIT
+		 time: 05 min, 58 sec, 957 mili
+

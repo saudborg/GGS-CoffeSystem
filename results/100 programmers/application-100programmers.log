@@ -1,0 +1,1645 @@
+10:31:34 INFO  c.s.g.Application:48 - Starting Application on MacBook-Pro-de-Saulo.local with PID 7335 (/Users/sauloborges/Projetos/coffeesystem/target/classes started by sauloborges in /Users/sauloborges/Projetos/coffeesystem)
+10:31:34 DEBUG c.s.g.Application:51 - Running with Spring Boot v1.3.1.RELEASE, Spring v4.2.4.RELEASE
+10:31:34 INFO  c.s.g.Application:664 - No active profile set, falling back to default profiles: default
+10:31:34 INFO  o.s.c.a.AnnotationConfigApplicationContext:578 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7364985f: startup date [Fri Jan 15 10:31:34 CET 2016]; root of context hierarchy
+10:31:35 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [class org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$47a7620] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:31:36 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+10:31:36 INFO  o.h.j.i.u.LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+10:31:36 INFO  o.h.Version:54 - HHH000412: Hibernate Core {4.3.11.Final}
+10:31:36 INFO  o.h.c.Environment:239 - HHH000206: hibernate.properties not found
+10:31:36 INFO  o.h.c.Environment:346 - HHH000021: Bytecode provider name : javassist
+10:31:36 INFO  o.h.a.c.Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+10:31:36 INFO  o.h.d.Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+10:31:36 INFO  o.h.h.i.a.ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+10:31:37 INFO  o.h.t.h.SchemaExport:344 - HHH000227: Running hbm2ddl schema export
+10:31:37 ERROR o.h.t.h.SchemaExport:426 - HHH000389: Unsuccessful: alter table statistic drop constraint FK_3vilcwuk9fy4uftpanx6mdx7d
+10:31:37 ERROR o.h.t.h.SchemaExport:427 - user lacks privilege or object not found: PUBLIC.STATISTIC
+10:31:37 INFO  o.h.t.h.SchemaExport:406 - HHH000230: Schema export complete
+10:31:37 DEBUG c.s.g.c.ExternalConfigComponent:29 - Programmers: 100
+10:31:37 DEBUG c.s.g.c.ExternalConfigComponent:30 - showDetailsInConsole: false
+10:31:37 WARN  o.s.a.r.l.SimpleMessageListenerContainer:665 - CachingConnectionFactory's channelCacheSize can not be less than the number of concurrentConsumers so it was reset to match: 10
+10:31:37 INFO  o.s.j.e.a.AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+10:31:37 INFO  o.s.c.s.DefaultLifecycleProcessor:341 - Starting beans in phase 2147483647
+10:31:38 INFO  o.s.a.r.c.CachingConnectionFactory:268 - Created new connection: SimpleConnection@57042789 [delegate=amqp://guest@127.0.0.1:5672/]
+10:31:38 INFO  o.s.a.r.c.RabbitAdmin:422 - Auto-declaring a non-durable, auto-delete, or exclusive Queue (choose-coffee-queue) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+10:31:38 INFO  o.s.a.r.c.RabbitAdmin:422 - Auto-declaring a non-durable, auto-delete, or exclusive Queue (pay-coffee-queue) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+10:31:38 INFO  o.s.a.r.c.RabbitAdmin:422 - Auto-declaring a non-durable, auto-delete, or exclusive Queue (get-coffee-in-machine-queue) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+10:31:38 INFO  o.s.a.r.c.RabbitAdmin:422 - Auto-declaring a non-durable, auto-delete, or exclusive Queue (statistics-queue) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+10:31:38 INFO  c.s.g.ApplicationRunner:44 - Starting the application for 100 programmers
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 10>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 9>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 2>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 3>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 6>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 4>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 1>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 5>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 8>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 7>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 1
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 2
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 3
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 4
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 5
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 6
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 7
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 10> / CoffeType = Cappuccino
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 8
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 2> / CoffeType = Latte Macchiato
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 9
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 8> / CoffeType = Cappuccino
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 4> / CoffeType = Latte Macchiato
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 10
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 3> / CoffeType = Latte Macchiato
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 6> / CoffeType = Cappuccino
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 7> / CoffeType = Cappuccino
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 5> / CoffeType = Espresso
+10:31:38 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 10>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 1> / CoffeType = Cappuccino
+10:31:38 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver14, programmer=Programmer [id=4, name=Programmer 10, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 9> / CoffeType = Latte Macchiato
+10:31:38 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 2>
+10:31:38 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 8>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 12>
+10:31:38 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 5>
+10:31:38 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 6>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 13>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 14>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 19>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 17>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 20>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 18>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 16>
+10:31:38 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver13, programmer=Programmer [id=1, name=Programmer 2, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 15>
+10:31:38 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 11>
+10:31:38 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver16, programmer=Programmer [id=8, name=Programmer 8, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:38 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver21, programmer=Programmer [id=9, name=Programmer 3, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:38 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver19, programmer=Programmer [id=5, name=Programmer 5, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:38 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver17, programmer=Programmer [id=10, name=Programmer 7, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:38 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver20, programmer=Programmer [id=3, name=Programmer 4, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:38 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver22, programmer=Programmer [id=6, name=Programmer 1, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:38 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver18, programmer=Programmer [id=2, name=Programmer 6, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:38 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver15, programmer=Programmer [id=7, name=Programmer 9, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:38 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 2>
+10:31:38 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 5>
+10:31:38 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 5>
+10:31:38 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 2>
+10:31:38 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=5, name=Programmer 5, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:38 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 7>
+10:31:38 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 4>
+10:31:38 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=1, name=Programmer 2, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 10>
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=4, name=Programmer 10, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 3>
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 8>
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 6>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 11
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 12> / CoffeType = Cappuccino
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 12
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 1>
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=2, name=Programmer 6, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 13
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 9>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 14> / CoffeType = Latte Macchiato
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 14
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 17> / CoffeType = Latte Macchiato
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 21>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 15
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 13> / CoffeType = Latte Macchiato
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 16
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 22>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 20> / CoffeType = Espresso
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 23>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 17
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 19> / CoffeType = Latte Macchiato
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 24>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 18
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 16> / CoffeType = Cappuccino
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 25>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 19
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 15> / CoffeType = Espresso
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 26>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 20
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 7>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 18> / CoffeType = Latte Macchiato
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 27>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 11> / CoffeType = Cappuccino
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 28>
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 12>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 29>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 30>
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=8, name=Programmer 8, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver13, programmer=Programmer [id=11, name=Programmer 12, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver20, programmer=Programmer [id=12, name=Programmer 14, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver17, programmer=Programmer [id=13, name=Programmer 17, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver16, programmer=Programmer [id=14, name=Programmer 13, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver15, programmer=Programmer [id=15, name=Programmer 20, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver22, programmer=Programmer [id=16, name=Programmer 19, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver18, programmer=Programmer [id=17, name=Programmer 16, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver21, programmer=Programmer [id=18, name=Programmer 15, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=10, name=Programmer 7, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver19, programmer=Programmer [id=19, name=Programmer 18, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver14, programmer=Programmer [id=20, name=Programmer 11, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 3>
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=9, name=Programmer 3, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 14>
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 4>
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=3, name=Programmer 4, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 17>
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 14>
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=12, name=Programmer 14, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 13>
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 1>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 21
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 9>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 22
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 21> / CoffeType = Latte Macchiato
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 12>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 23
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 22> / CoffeType = Espresso
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 24> / CoffeType = Espresso
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 24
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=6, name=Programmer 1, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 20>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 25
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 19>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 27> / CoffeType = Cappuccino
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 26
+10:31:39 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 16>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 27
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 31>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 32>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 33>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 23> / CoffeType = Latte Macchiato
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 28
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 29
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 29> / CoffeType = Cappuccino
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 30> / CoffeType = Espresso
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 30
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 34>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 26> / CoffeType = Espresso
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 28> / CoffeType = Cappuccino
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 35>
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=7, name=Programmer 9, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 25> / CoffeType = Espresso
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 36>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 37>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 38>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 39>
+10:31:39 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 40>
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver13, programmer=Programmer [id=21, name=Programmer 21, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=11, name=Programmer 12, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver20, programmer=Programmer [id=22, name=Programmer 22, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver16, programmer=Programmer [id=23, name=Programmer 24, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver18, programmer=Programmer [id=24, name=Programmer 27, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver17, programmer=Programmer [id=25, name=Programmer 23, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver14, programmer=Programmer [id=26, name=Programmer 29, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver19, programmer=Programmer [id=27, name=Programmer 30, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver22, programmer=Programmer [id=28, name=Programmer 26, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver21, programmer=Programmer [id=29, name=Programmer 28, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver15, programmer=Programmer [id=30, name=Programmer 25, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 17>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=13, name=Programmer 17, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 15>
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 19>
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 20>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=16, name=Programmer 19, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 18>
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 11>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=15, name=Programmer 20, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 13>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=14, name=Programmer 13, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 21>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=5, name=Programmer 5, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 16>
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 11>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=17, name=Programmer 16, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 31
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 34> / CoffeType = Cappuccino
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 22>
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 32
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 33
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 34
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 41>
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 24>
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 35
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 36> / CoffeType = Cappuccino
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=20, name=Programmer 11, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 37> / CoffeType = Latte Macchiato
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 35> / CoffeType = Latte Macchiato
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 36
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 37
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 33> / CoffeType = Espresso
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 38
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 31> / CoffeType = Espresso
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 32> / CoffeType = Espresso
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 39
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 40
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 38> / CoffeType = Espresso
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 42>
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 43>
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 45>
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 44>
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 39> / CoffeType = Cappuccino
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 40> / CoffeType = Latte Macchiato
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 46>
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 47>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver18, programmer=Programmer [id=31, name=Programmer 34, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 48>
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 49>
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 50>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver14, programmer=Programmer [id=32, name=Programmer 36, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver19, programmer=Programmer [id=33, name=Programmer 37, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver17, programmer=Programmer [id=34, name=Programmer 35, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver16, programmer=Programmer [id=35, name=Programmer 33, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver13, programmer=Programmer [id=36, name=Programmer 31, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:40 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 5> got your coffee. 
+	Spent total: 00 min, 02 sec, 099 mili
+	Spent in the pay queue: 00 min, 00 sec, 079 mili
+	Spent to paid and got a coffee: 00 min, 01 sec, 263 mili
+	Spent in the machine coffee queue: 00 min, 00 sec, 001 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 261 mili
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver20, programmer=Programmer [id=37, name=Programmer 32, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 10>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver22, programmer=Programmer [id=38, name=Programmer 38, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver15, programmer=Programmer [id=40, name=Programmer 40, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver21, programmer=Programmer [id=39, name=Programmer 39, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 15>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=1, name=Programmer 2, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 27>
+10:31:40 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 2> got your coffee. 
+	Spent total: 00 min, 02 sec, 348 mili
+	Spent in the pay queue: 00 min, 00 sec, 078 mili
+	Spent to paid and got a coffee: 00 min, 01 sec, 511 mili
+	Spent in the machine coffee queue: 00 min, 00 sec, 002 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 509 mili
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=18, name=Programmer 15, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:40 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 8>
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 18>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=19, name=Programmer 18, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 23>
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 21>
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 29>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=21, name=Programmer 21, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 27>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=24, name=Programmer 27, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 30>
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 22>
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 24>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=22, name=Programmer 22, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 26>
+10:31:40 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 28>
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 41
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 41> / CoffeType = Latte Macchiato
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 51>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=23, name=Programmer 24, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver18, programmer=Programmer [id=41, name=Programmer 41, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 42
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 42> / CoffeType = Espresso
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 52>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver14, programmer=Programmer [id=42, name=Programmer 42, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 43
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 43> / CoffeType = Latte Macchiato
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 44
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 45
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver19, programmer=Programmer [id=43, name=Programmer 43, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 46> / CoffeType = Espresso
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 53>
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 45> / CoffeType = Cappuccino
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 46
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 47
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 44> / CoffeType = Latte Macchiato
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 48
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 48> / CoffeType = Espresso
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 54>
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 49
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 55>
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 50> / CoffeType = Latte Macchiato
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 56>
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 50
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 57>
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 49> / CoffeType = Latte Macchiato
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 47> / CoffeType = Cappuccino
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 58>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver13, programmer=Programmer [id=44, name=Programmer 46, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 59>
+10:31:40 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 60>
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver16, programmer=Programmer [id=45, name=Programmer 45, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver17, programmer=Programmer [id=46, name=Programmer 44, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver22, programmer=Programmer [id=47, name=Programmer 48, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver15, programmer=Programmer [id=48, name=Programmer 50, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver21, programmer=Programmer [id=49, name=Programmer 49, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:40 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver20, programmer=Programmer [id=50, name=Programmer 47, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 23>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=25, name=Programmer 23, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 25>
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 28>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=29, name=Programmer 28, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 34>
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 29>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=26, name=Programmer 29, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 36>
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 30>
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 37>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=27, name=Programmer 30, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 25>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=30, name=Programmer 25, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 35>
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 26>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=28, name=Programmer 26, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 33>
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 51
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 52
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 51> / CoffeType = Cappuccino
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 52> / CoffeType = Cappuccino
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver18, programmer=Programmer [id=51, name=Programmer 51, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 61>
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 62>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver14, programmer=Programmer [id=52, name=Programmer 52, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 53
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 53> / CoffeType = Cappuccino
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 63>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver19, programmer=Programmer [id=53, name=Programmer 53, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 54
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 55
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 56
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 57> / CoffeType = Latte Macchiato
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 56> / CoffeType = Espresso
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 57
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 54> / CoffeType = Latte Macchiato
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 58
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 55> / CoffeType = Latte Macchiato
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 59
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 58> / CoffeType = Latte Macchiato
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 64>
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 60
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 59> / CoffeType = Cappuccino
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 65>
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 66>
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 60> / CoffeType = Espresso
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 68>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver22, programmer=Programmer [id=54, name=Programmer 57, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 67>
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 69>
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 70>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver17, programmer=Programmer [id=55, name=Programmer 56, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver13, programmer=Programmer [id=56, name=Programmer 54, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver16, programmer=Programmer [id=57, name=Programmer 55, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver15, programmer=Programmer [id=58, name=Programmer 58, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver21, programmer=Programmer [id=59, name=Programmer 59, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver20, programmer=Programmer [id=60, name=Programmer 60, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 36>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=32, name=Programmer 36, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 31>
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 35>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=34, name=Programmer 35, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 32>
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 34>
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 33>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=31, name=Programmer 34, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 40>
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 38>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=35, name=Programmer 33, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 31>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=36, name=Programmer 31, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 39>
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 37>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=33, name=Programmer 37, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 41>
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 32>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=37, name=Programmer 32, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 42>
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 38>
+10:31:41 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 43>
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 61
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 62
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 61> / CoffeType = Latte Macchiato
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 62> / CoffeType = Cappuccino
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=38, name=Programmer 38, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 71>
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 72>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver18, programmer=Programmer [id=61, name=Programmer 61, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver14, programmer=Programmer [id=62, name=Programmer 62, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 63
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 63> / CoffeType = Espresso
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver19, programmer=Programmer [id=63, name=Programmer 63, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 73>
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 64
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 65
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 66
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 65> / CoffeType = Espresso
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 64> / CoffeType = Latte Macchiato
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 66> / CoffeType = Latte Macchiato
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver17, programmer=Programmer [id=64, name=Programmer 65, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 67
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 68
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 70> / CoffeType = Espresso
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 69
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 67> / CoffeType = Cappuccino
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 70
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 74>
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 75>
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 76>
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 68> / CoffeType = Espresso
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 69> / CoffeType = Espresso
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 77>
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 78>
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 79>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver22, programmer=Programmer [id=65, name=Programmer 64, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:41 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 80>
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver13, programmer=Programmer [id=66, name=Programmer 66, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver20, programmer=Programmer [id=67, name=Programmer 70, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver16, programmer=Programmer [id=68, name=Programmer 67, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver15, programmer=Programmer [id=69, name=Programmer 68, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver21, programmer=Programmer [id=70, name=Programmer 69, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 39>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=39, name=Programmer 39, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 46>
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 40>
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 45>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=40, name=Programmer 40, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 42>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=42, name=Programmer 42, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 44>
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 43>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=43, name=Programmer 43, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 48>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=4, name=Programmer 10, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:42 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 10> got your coffee. 
+	Spent total: 00 min, 03 sec, 905 mili
+	Spent in the pay queue: 00 min, 00 sec, 071 mili
+	Spent to paid and got a coffee: 00 min, 02 sec, 828 mili
+	Spent in the machine coffee queue: 00 min, 01 sec, 064 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 764 mili
+10:31:42 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 6>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=8, name=Programmer 8, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 41>
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 46>
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 50>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=41, name=Programmer 41, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 49>
+10:31:42 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 8> got your coffee. 
+	Spent total: 00 min, 04 sec, 115 mili
+	Spent in the pay queue: 00 min, 00 sec, 079 mili
+	Spent to paid and got a coffee: 00 min, 03 sec, 032 mili
+	Spent in the machine coffee queue: 00 min, 01 sec, 270 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 762 mili
+10:31:42 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 7>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=44, name=Programmer 46, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 45>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=45, name=Programmer 45, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 47>
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 71
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 72
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 71> / CoffeType = Latte Macchiato
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 72> / CoffeType = Espresso
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver18, programmer=Programmer [id=71, name=Programmer 71, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 81>
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 82>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver14, programmer=Programmer [id=72, name=Programmer 72, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 48>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=47, name=Programmer 48, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 51>
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 73
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 73> / CoffeType = Latte Macchiato
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver19, programmer=Programmer [id=73, name=Programmer 73, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 83>
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 74
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 75
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 78> / CoffeType = Latte Macchiato
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 80> / CoffeType = Cappuccino
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver20, programmer=Programmer [id=74, name=Programmer 78, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 76
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 84>
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 85>
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 77
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 79> / CoffeType = Cappuccino
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 78
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 74> / CoffeType = Latte Macchiato
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 79
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 76> / CoffeType = Cappuccino
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 80
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 77> / CoffeType = Espresso
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 87>
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 86>
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 75> / CoffeType = Cappuccino
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 88>
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 89>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver21, programmer=Programmer [id=75, name=Programmer 80, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 90>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver15, programmer=Programmer [id=76, name=Programmer 79, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver22, programmer=Programmer [id=77, name=Programmer 74, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver13, programmer=Programmer [id=78, name=Programmer 76, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver16, programmer=Programmer [id=79, name=Programmer 77, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver17, programmer=Programmer [id=80, name=Programmer 75, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 44>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=46, name=Programmer 44, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 52>
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 51>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=51, name=Programmer 51, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 53>
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 49>
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 50>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=49, name=Programmer 49, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 57>
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 56>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=48, name=Programmer 50, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 47>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=50, name=Programmer 47, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 54>
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 52>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=52, name=Programmer 52, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 55>
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 81
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 82
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 82> / CoffeType = Latte Macchiato
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 81> / CoffeType = Cappuccino
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 91>
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 92>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver14, programmer=Programmer [id=81, name=Programmer 82, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver18, programmer=Programmer [id=82, name=Programmer 81, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 83
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 83> / CoffeType = Latte Macchiato
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver19, programmer=Programmer [id=83, name=Programmer 83, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 93>
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 84
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 85
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 86
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 84> / CoffeType = Espresso
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 87> / CoffeType = Espresso
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 87
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 86> / CoffeType = Cappuccino
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 85> / CoffeType = Cappuccino
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 94>
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 95>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver20, programmer=Programmer [id=85, name=Programmer 84, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 88
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 96>
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 89
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 97>
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 90> / CoffeType = Cappuccino
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 90
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 88> / CoffeType = Cappuccino
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 89> / CoffeType = Cappuccino
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 98>
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 99>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver22, programmer=Programmer [id=84, name=Programmer 87, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:42 DEBUG c.s.g.r.ChooseCoffeeReceiver:44 - Received in choose queue:  <Programmer 100>
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver15, programmer=Programmer [id=86, name=Programmer 86, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver21, programmer=Programmer [id=87, name=Programmer 85, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver17, programmer=Programmer [id=88, name=Programmer 90, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver13, programmer=Programmer [id=89, name=Programmer 88, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver16, programmer=Programmer [id=90, name=Programmer 89, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 57>
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 56>
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=54, name=Programmer 57, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 58>
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 59>
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=55, name=Programmer 56, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 53>
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=53, name=Programmer 53, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 60>
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 58>
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=58, name=Programmer 58, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 61>
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 54>
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=56, name=Programmer 54, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 62>
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 55>
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=57, name=Programmer 55, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 63>
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 91
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 92
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 91> / CoffeType = Latte Macchiato
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 92> / CoffeType = Espresso
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver14, programmer=Programmer [id=91, name=Programmer 91, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver18, programmer=Programmer [id=92, name=Programmer 92, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 60>
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 65>
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=60, name=Programmer 60, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 93
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 93> / CoffeType = Espresso
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver19, programmer=Programmer [id=93, name=Programmer 93, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 94
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 95
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 95> / CoffeType = Latte Macchiato
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 94> / CoffeType = Latte Macchiato
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 96
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 97
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 98> / CoffeType = Latte Macchiato
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver22, programmer=Programmer [id=94, name=Programmer 95, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 98
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 100> / CoffeType = Cappuccino
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 99
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 99> / CoffeType = Espresso
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:54 - Programmer saved id: 100
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 97> / CoffeType = Cappuccino
+10:31:43 DEBUG c.s.g.r.ChooseCoffeeReceiver:64 - Leaving in choose queue:  <Programmer 96> / CoffeType = Latte Macchiato
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver20, programmer=Programmer [id=95, name=Programmer 94, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver17, programmer=Programmer [id=96, name=Programmer 98, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver16, programmer=Programmer [id=97, name=Programmer 100, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver13, programmer=Programmer [id=98, name=Programmer 99, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver21, programmer=Programmer [id=99, name=Programmer 97, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.ChooseCoffeeReceiver15, programmer=Programmer [id=100, name=Programmer 96, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 59>
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=59, name=Programmer 59, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 64>
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 62>
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=62, name=Programmer 62, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 66>
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 61>
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=61, name=Programmer 61, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 70>
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 63>
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 66>
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=63, name=Programmer 63, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 67>
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 68>
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=66, name=Programmer 66, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 65>
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=64, name=Programmer 65, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:43 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 69>
+10:31:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=2, name=Programmer 6, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:43 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 6> got your coffee. 
+	Spent total: 00 min, 05 sec, 669 mili
+	Spent in the pay queue: 00 min, 00 sec, 079 mili
+	Spent to paid and got a coffee: 00 min, 04 sec, 585 mili
+	Spent in the machine coffee queue: 00 min, 02 sec, 825 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 760 mili
+10:31:43 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 3>
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 64>
+10:31:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=10, name=Programmer 7, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 71>
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 70>
+10:31:44 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 7> got your coffee. 
+	Spent total: 00 min, 05 sec, 883 mili
+	Spent in the pay queue: 00 min, 00 sec, 335 mili
+	Spent to paid and got a coffee: 00 min, 04 sec, 794 mili
+	Spent in the machine coffee queue: 00 min, 03 sec, 030 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 764 mili
+10:31:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=65, name=Programmer 64, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 72>
+10:31:44 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 4>
+10:31:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=67, name=Programmer 70, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 67>
+10:31:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=68, name=Programmer 67, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 73>
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 71>
+10:31:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=71, name=Programmer 71, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 78>
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 68>
+10:31:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=69, name=Programmer 68, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 80>
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 73>
+10:31:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=73, name=Programmer 73, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 79>
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 69>
+10:31:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=70, name=Programmer 69, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 74>
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 72>
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 78>
+10:31:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=72, name=Programmer 72, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 76>
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 77>
+10:31:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=74, name=Programmer 78, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 80>
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 79>
+10:31:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=75, name=Programmer 80, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 75>
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 82>
+10:31:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=76, name=Programmer 79, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 74>
+10:31:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=77, name=Programmer 74, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 81>
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 77>
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 76>
+10:31:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=79, name=Programmer 77, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 83>
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 84>
+10:31:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=78, name=Programmer 76, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 82>
+10:31:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=81, name=Programmer 82, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:44 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 87>
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 75>
+10:31:45 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=80, name=Programmer 75, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 86>
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 81>
+10:31:45 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=82, name=Programmer 81, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 85>
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 83>
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 84>
+10:31:45 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=83, name=Programmer 83, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 88>
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 90>
+10:31:45 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=85, name=Programmer 84, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 87>
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 86>
+10:31:45 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=86, name=Programmer 86, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 89>
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 91>
+10:31:45 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=84, name=Programmer 87, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:45 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=9, name=Programmer 3, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:45 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 3> got your coffee. 
+	Spent total: 00 min, 07 sec, 186 mili
+	Spent in the pay queue: 00 min, 00 sec, 574 mili
+	Spent to paid and got a coffee: 00 min, 05 sec, 855 mili
+	Spent in the machine coffee queue: 00 min, 04 sec, 341 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 513 mili
+10:31:45 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 14>
+10:31:45 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=3, name=Programmer 4, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 88>
+10:31:45 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 4> got your coffee. 
+	Spent total: 00 min, 07 sec, 395 mili
+	Spent in the pay queue: 00 min, 00 sec, 335 mili
+	Spent to paid and got a coffee: 00 min, 06 sec, 055 mili
+	Spent in the machine coffee queue: 00 min, 04 sec, 548 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 507 mili
+10:31:45 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=89, name=Programmer 88, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 92>
+10:31:45 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 1>
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 89>
+10:31:45 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=90, name=Programmer 89, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 93>
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 85>
+10:31:45 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=87, name=Programmer 85, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 95>
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 90>
+10:31:45 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=88, name=Programmer 90, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 94>
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 92>
+10:31:45 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=92, name=Programmer 92, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 98>
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 91>
+10:31:45 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=91, name=Programmer 91, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 100>
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 93>
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 99>
+10:31:45 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=93, name=Programmer 93, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 95>
+10:31:45 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 97>
+10:31:45 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=94, name=Programmer 95, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:46 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 98>
+10:31:46 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=96, name=Programmer 98, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:46 DEBUG c.s.g.r.PayCoffeeReceiver:36 - Received in pay queue:  <Programmer 96>
+10:31:46 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 100>
+10:31:46 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver39, programmer=Programmer [id=97, name=Programmer 100, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:46 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 94>
+10:31:46 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver35, programmer=Programmer [id=95, name=Programmer 94, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:46 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 96>
+10:31:46 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver36, programmer=Programmer [id=100, name=Programmer 96, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:46 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 99>
+10:31:46 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver37, programmer=Programmer [id=98, name=Programmer 99, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:46 DEBUG c.s.g.r.PayCoffeeReceiver:54 - Leaving pay queue:  <Programmer 97>
+10:31:46 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.PayCoffeeReceiver38, programmer=Programmer [id=99, name=Programmer 97, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:46 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=12, name=Programmer 14, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:46 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 14> got your coffee. 
+	Spent total: 00 min, 08 sec, 118 mili
+	Spent in the pay queue: 00 min, 00 sec, 249 mili
+	Spent to paid and got a coffee: 00 min, 07 sec, 118 mili
+	Spent in the machine coffee queue: 00 min, 05 sec, 606 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 512 mili
+10:31:46 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 9>
+10:31:47 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=6, name=Programmer 1, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:47 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 1> got your coffee. 
+	Spent total: 00 min, 09 sec, 168 mili
+	Spent in the pay queue: 00 min, 00 sec, 584 mili
+	Spent to paid and got a coffee: 00 min, 07 sec, 578 mili
+	Spent in the machine coffee queue: 00 min, 05 sec, 811 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 767 mili
+10:31:47 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 12>
+10:31:48 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=7, name=Programmer 9, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:48 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 9> got your coffee. 
+	Spent total: 00 min, 10 sec, 219 mili
+	Spent in the pay queue: 00 min, 00 sec, 584 mili
+	Spent to paid and got a coffee: 00 min, 08 sec, 628 mili
+	Spent in the machine coffee queue: 00 min, 07 sec, 116 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 512 mili
+10:31:48 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 17>
+10:31:49 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=11, name=Programmer 12, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:49 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 12> got your coffee. 
+	Spent total: 00 min, 10 sec, 344 mili
+	Spent in the pay queue: 00 min, 00 sec, 010 mili
+	Spent to paid and got a coffee: 00 min, 09 sec, 331 mili
+	Spent in the machine coffee queue: 00 min, 07 sec, 578 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 753 mili
+10:31:49 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 19>
+10:31:49 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=13, name=Programmer 17, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:49 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 17> got your coffee. 
+	Spent total: 00 min, 11 sec, 150 mili
+	Spent in the pay queue: 00 min, 00 sec, 258 mili
+	Spent to paid and got a coffee: 00 min, 09 sec, 887 mili
+	Spent in the machine coffee queue: 00 min, 08 sec, 377 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 510 mili
+10:31:49 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 20>
+10:31:50 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=16, name=Programmer 19, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:31:50 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 19> got your coffee. 
+	Spent total: 00 min, 11 sec, 855 mili
+	Spent in the pay queue: 00 min, 00 sec, 517 mili
+	Spent to paid and got a coffee: 00 min, 10 sec, 586 mili
+	Spent in the machine coffee queue: 00 min, 09 sec, 078 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 508 mili
+10:31:50 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 13>
+10:31:51 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=15, name=Programmer 20, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:31:51 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 20> got your coffee. 
+	Spent total: 00 min, 12 sec, 417 mili
+	Spent in the pay queue: 00 min, 00 sec, 517 mili
+	Spent to paid and got a coffee: 00 min, 11 sec, 148 mili
+	Spent in the machine coffee queue: 00 min, 09 sec, 886 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 262 mili
+10:31:51 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 16>
+10:31:52 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=14, name=Programmer 13, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:52 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 13> got your coffee. 
+	Spent total: 00 min, 13 sec, 372 mili
+	Spent in the pay queue: 00 min, 00 sec, 501 mili
+	Spent to paid and got a coffee: 00 min, 11 sec, 869 mili
+	Spent in the machine coffee queue: 00 min, 10 sec, 357 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 512 mili
+10:31:52 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 11>
+10:31:52 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=17, name=Programmer 16, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:31:52 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 16> got your coffee. 
+	Spent total: 00 min, 14 sec, 183 mili
+	Spent in the pay queue: 00 min, 00 sec, 518 mili
+	Spent to paid and got a coffee: 00 min, 12 sec, 661 mili
+	Spent in the machine coffee queue: 00 min, 10 sec, 898 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 763 mili
+10:31:52 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 15>
+10:31:53 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=20, name=Programmer 11, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:53 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 11> got your coffee. 
+	Spent total: 00 min, 15 sec, 136 mili
+	Spent in the pay queue: 00 min, 00 sec, 768 mili
+	Spent to paid and got a coffee: 00 min, 13 sec, 613 mili
+	Spent in the machine coffee queue: 00 min, 11 sec, 854 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 759 mili
+10:31:53 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 18>
+10:31:54 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=18, name=Programmer 15, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:54 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 15> got your coffee. 
+	Spent total: 00 min, 15 sec, 448 mili
+	Spent in the pay queue: 00 min, 00 sec, 763 mili
+	Spent to paid and got a coffee: 00 min, 13 sec, 684 mili
+	Spent in the machine coffee queue: 00 min, 12 sec, 423 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 261 mili
+10:31:54 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 21>
+10:31:55 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=19, name=Programmer 18, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:55 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 18> got your coffee. 
+	Spent total: 00 min, 16 sec, 659 mili
+	Spent in the pay queue: 00 min, 00 sec, 770 mili
+	Spent to paid and got a coffee: 00 min, 14 sec, 885 mili
+	Spent in the machine coffee queue: 00 min, 13 sec, 367 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 518 mili
+10:31:55 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 27>
+10:31:55 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=21, name=Programmer 21, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:55 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 21> got your coffee. 
+	Spent total: 00 min, 16 sec, 460 mili
+	Spent in the pay queue: 00 min, 00 sec, 498 mili
+	Spent to paid and got a coffee: 00 min, 14 sec, 958 mili
+	Spent in the machine coffee queue: 00 min, 13 sec, 446 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 512 mili
+10:31:55 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 22>
+10:31:56 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=22, name=Programmer 22, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:56 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 22> got your coffee. 
+	Spent total: 00 min, 17 sec, 732 mili
+	Spent in the pay queue: 00 min, 00 sec, 520 mili
+	Spent to paid and got a coffee: 00 min, 16 sec, 206 mili
+	Spent in the machine coffee queue: 00 min, 14 sec, 937 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 269 mili
+10:31:56 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 24>
+10:31:57 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=24, name=Programmer 27, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:31:57 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 27> got your coffee. 
+	Spent total: 00 min, 17 sec, 919 mili
+	Spent in the pay queue: 00 min, 00 sec, 756 mili
+	Spent to paid and got a coffee: 00 min, 16 sec, 409 mili
+	Spent in the machine coffee queue: 00 min, 14 sec, 646 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 763 mili
+10:31:57 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 23>
+10:31:58 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=23, name=Programmer 24, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:31:58 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 24> got your coffee. 
+	Spent total: 00 min, 18 sec, 995 mili
+	Spent in the pay queue: 00 min, 00 sec, 520 mili
+	Spent to paid and got a coffee: 00 min, 17 sec, 469 mili
+	Spent in the machine coffee queue: 00 min, 16 sec, 209 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 260 mili
+10:31:58 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 28>
+10:31:58 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=25, name=Programmer 23, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:31:58 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 23> got your coffee. 
+	Spent total: 00 min, 19 sec, 433 mili
+	Spent in the pay queue: 00 min, 00 sec, 766 mili
+	Spent to paid and got a coffee: 00 min, 17 sec, 662 mili
+	Spent in the machine coffee queue: 00 min, 16 sec, 154 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 508 mili
+10:31:58 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 29>
+10:32:00 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=29, name=Programmer 28, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:32:00 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 28> got your coffee. 
+	Spent total: 00 min, 20 sec, 762 mili
+	Spent in the pay queue: 00 min, 01 sec, 023 mili
+	Spent to paid and got a coffee: 00 min, 18 sec, 984 mili
+	Spent in the machine coffee queue: 00 min, 17 sec, 220 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 764 mili
+10:32:00 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 30>
+10:32:00 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=26, name=Programmer 29, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:32:00 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 29> got your coffee. 
+	Spent total: 00 min, 21 sec, 192 mili
+	Spent in the pay queue: 00 min, 00 sec, 997 mili
+	Spent to paid and got a coffee: 00 min, 19 sec, 189 mili
+	Spent in the machine coffee queue: 00 min, 17 sec, 430 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 759 mili
+10:32:00 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 25>
+10:32:01 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=27, name=Programmer 30, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:32:01 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 30> got your coffee. 
+	Spent total: 00 min, 22 sec, 025 mili
+	Spent in the pay queue: 00 min, 01 sec, 008 mili
+	Spent to paid and got a coffee: 00 min, 20 sec, 010 mili
+	Spent in the machine coffee queue: 00 min, 18 sec, 750 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 260 mili
+10:32:01 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 26>
+10:32:01 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=30, name=Programmer 25, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:32:01 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 25> got your coffee. 
+	Spent total: 00 min, 22 sec, 462 mili
+	Spent in the pay queue: 00 min, 01 sec, 267 mili
+	Spent to paid and got a coffee: 00 min, 20 sec, 436 mili
+	Spent in the machine coffee queue: 00 min, 19 sec, 174 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 262 mili
+10:32:01 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 36>
+10:32:02 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=28, name=Programmer 26, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:32:02 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 26> got your coffee. 
+	Spent total: 00 min, 23 sec, 294 mili
+	Spent in the pay queue: 00 min, 01 sec, 023 mili
+	Spent to paid and got a coffee: 00 min, 21 sec, 265 mili
+	Spent in the machine coffee queue: 00 min, 20 sec, 002 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 263 mili
+10:32:02 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 35>
+10:32:03 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=32, name=Programmer 36, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:32:03 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 36> got your coffee. 
+	Spent total: 00 min, 23 sec, 713 mili
+	Spent in the pay queue: 00 min, 00 sec, 990 mili
+	Spent to paid and got a coffee: 00 min, 21 sec, 967 mili
+	Spent in the machine coffee queue: 00 min, 20 sec, 205 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 762 mili
+10:32:03 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 34>
+10:32:04 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=34, name=Programmer 35, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:32:04 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 35> got your coffee. 
+	Spent total: 00 min, 24 sec, 300 mili
+	Spent in the pay queue: 00 min, 01 sec, 011 mili
+	Spent to paid and got a coffee: 00 min, 22 sec, 534 mili
+	Spent in the machine coffee queue: 00 min, 21 sec, 019 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 515 mili
+10:32:04 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 33>
+10:32:05 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=31, name=Programmer 34, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:32:05 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 34> got your coffee. 
+	Spent total: 00 min, 25 sec, 482 mili
+	Spent in the pay queue: 00 min, 00 sec, 765 mili
+	Spent to paid and got a coffee: 00 min, 23 sec, 710 mili
+	Spent in the machine coffee queue: 00 min, 21 sec, 949 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 761 mili
+10:32:05 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 31>
+10:32:05 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=35, name=Programmer 33, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:32:05 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 33> got your coffee. 
+	Spent total: 00 min, 25 sec, 568 mili
+	Spent in the pay queue: 00 min, 01 sec, 015 mili
+	Spent to paid and got a coffee: 00 min, 23 sec, 795 mili
+	Spent in the machine coffee queue: 00 min, 22 sec, 533 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 262 mili
+10:32:05 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 37>
+10:32:06 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=36, name=Programmer 31, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:32:06 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 31> got your coffee. 
+	Spent total: 00 min, 26 sec, 747 mili
+	Spent in the pay queue: 00 min, 01 sec, 247 mili
+	Spent to paid and got a coffee: 00 min, 24 sec, 741 mili
+	Spent in the machine coffee queue: 00 min, 23 sec, 482 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 259 mili
+10:32:06 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 32>
+10:32:06 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=33, name=Programmer 37, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:32:06 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 37> got your coffee. 
+	Spent total: 00 min, 27 sec, 084 mili
+	Spent in the pay queue: 00 min, 01 sec, 001 mili
+	Spent to paid and got a coffee: 00 min, 25 sec, 080 mili
+	Spent in the machine coffee queue: 00 min, 23 sec, 565 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 515 mili
+10:32:06 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 38>
+10:32:07 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=37, name=Programmer 32, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:32:07 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 32> got your coffee. 
+	Spent total: 00 min, 28 sec, 010 mili
+	Spent in the pay queue: 00 min, 01 sec, 266 mili
+	Spent to paid and got a coffee: 00 min, 25 sec, 985 mili
+	Spent in the machine coffee queue: 00 min, 24 sec, 726 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 259 mili
+10:32:07 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 39>
+10:32:08 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=38, name=Programmer 38, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:32:08 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 38> got your coffee. 
+	Spent total: 00 min, 28 sec, 355 mili
+	Spent in the pay queue: 00 min, 01 sec, 266 mili
+	Spent to paid and got a coffee: 00 min, 26 sec, 332 mili
+	Spent in the machine coffee queue: 00 min, 25 sec, 065 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 267 mili
+10:32:08 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 40>
+10:32:09 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=39, name=Programmer 39, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:32:09 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 39> got your coffee. 
+	Spent total: 00 min, 29 sec, 774 mili
+	Spent in the pay queue: 00 min, 01 sec, 498 mili
+	Spent to paid and got a coffee: 00 min, 27 sec, 518 mili
+	Spent in the machine coffee queue: 00 min, 25 sec, 754 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 764 mili
+10:32:09 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 42>
+10:32:09 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=40, name=Programmer 40, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:32:09 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 40> got your coffee. 
+	Spent total: 00 min, 29 sec, 871 mili
+	Spent in the pay queue: 00 min, 01 sec, 266 mili
+	Spent to paid and got a coffee: 00 min, 27 sec, 600 mili
+	Spent in the machine coffee queue: 00 min, 26 sec, 087 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 513 mili
+10:32:09 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 43>
+10:32:10 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=42, name=Programmer 42, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:32:10 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 42> got your coffee. 
+	Spent total: 00 min, 30 sec, 532 mili
+	Spent in the pay queue: 00 min, 01 sec, 009 mili
+	Spent to paid and got a coffee: 00 min, 28 sec, 770 mili
+	Spent in the machine coffee queue: 00 min, 27 sec, 503 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 267 mili
+10:32:10 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 41>
+10:32:11 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=43, name=Programmer 43, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:32:11 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 43> got your coffee. 
+	Spent total: 00 min, 30 sec, 875 mili
+	Spent in the pay queue: 00 min, 01 sec, 007 mili
+	Spent to paid and got a coffee: 00 min, 29 sec, 108 mili
+	Spent in the machine coffee queue: 00 min, 27 sec, 596 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 512 mili
+10:32:11 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 46>
+10:32:12 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=41, name=Programmer 41, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:32:12 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 41> got your coffee. 
+	Spent total: 00 min, 32 sec, 054 mili
+	Spent in the pay queue: 00 min, 00 sec, 999 mili
+	Spent to paid and got a coffee: 00 min, 30 sec, 050 mili
+	Spent in the machine coffee queue: 00 min, 28 sec, 538 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 512 mili
+10:32:12 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 45>
+10:32:12 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=44, name=Programmer 46, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:32:12 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 46> got your coffee. 
+	Spent total: 00 min, 32 sec, 142 mili
+	Spent in the pay queue: 00 min, 01 sec, 240 mili
+	Spent to paid and got a coffee: 00 min, 30 sec, 145 mili
+	Spent in the machine coffee queue: 00 min, 28 sec, 881 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 264 mili
+10:32:12 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 48>
+10:32:13 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=47, name=Programmer 48, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:32:13 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 48> got your coffee. 
+	Spent total: 00 min, 33 sec, 408 mili
+	Spent in the pay queue: 00 min, 01 sec, 261 mili
+	Spent to paid and got a coffee: 00 min, 31 sec, 387 mili
+	Spent in the machine coffee queue: 00 min, 30 sec, 124 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 263 mili
+10:32:13 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 44>
+10:32:14 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=45, name=Programmer 45, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:32:14 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 45> got your coffee. 
+	Spent total: 00 min, 33 sec, 820 mili
+	Spent in the pay queue: 00 min, 01 sec, 255 mili
+	Spent to paid and got a coffee: 00 min, 31 sec, 810 mili
+	Spent in the machine coffee queue: 00 min, 30 sec, 041 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 769 mili
+10:32:14 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 51>
+10:32:15 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=46, name=Programmer 44, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:32:15 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 44> got your coffee. 
+	Spent total: 00 min, 34 sec, 928 mili
+	Spent in the pay queue: 00 min, 01 sec, 258 mili
+	Spent to paid and got a coffee: 00 min, 32 sec, 663 mili
+	Spent in the machine coffee queue: 00 min, 31 sec, 148 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 515 mili
+10:32:15 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 49>
+10:32:15 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=51, name=Programmer 51, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:32:15 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 51> got your coffee. 
+	Spent total: 00 min, 35 sec, 084 mili
+	Spent in the pay queue: 00 min, 01 sec, 020 mili
+	Spent to paid and got a coffee: 00 min, 33 sec, 308 mili
+	Spent in the machine coffee queue: 00 min, 31 sec, 549 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 759 mili
+10:32:15 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 50>
+10:32:16 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=49, name=Programmer 49, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:32:16 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 49> got your coffee. 
+	Spent total: 00 min, 36 sec, 443 mili
+	Spent in the pay queue: 00 min, 01 sec, 493 mili
+	Spent to paid and got a coffee: 00 min, 33 sec, 944 mili
+	Spent in the machine coffee queue: 00 min, 32 sec, 432 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 512 mili
+10:32:16 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 47>
+10:32:17 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=48, name=Programmer 50, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:32:17 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 50> got your coffee. 
+	Spent total: 00 min, 37 sec, 102 mili
+	Spent in the pay queue: 00 min, 01 sec, 493 mili
+	Spent to paid and got a coffee: 00 min, 34 sec, 604 mili
+	Spent in the machine coffee queue: 00 min, 33 sec, 088 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 516 mili
+10:32:17 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 52>
+10:32:18 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=50, name=Programmer 47, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:32:18 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 47> got your coffee. 
+	Spent total: 00 min, 38 sec, 213 mili
+	Spent in the pay queue: 00 min, 01 sec, 506 mili
+	Spent to paid and got a coffee: 00 min, 35 sec, 702 mili
+	Spent in the machine coffee queue: 00 min, 33 sec, 935 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 767 mili
+10:32:18 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 57>
+10:32:19 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=52, name=Programmer 52, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:32:19 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 52> got your coffee. 
+	Spent total: 00 min, 38 sec, 365 mili
+	Spent in the pay queue: 00 min, 01 sec, 262 mili
+	Spent to paid and got a coffee: 00 min, 36 sec, 349 mili
+	Spent in the machine coffee queue: 00 min, 34 sec, 588 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 761 mili
+10:32:19 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 56>
+10:32:20 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=54, name=Programmer 57, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:32:20 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 57> got your coffee. 
+	Spent total: 00 min, 39 sec, 221 mili
+	Spent in the pay queue: 00 min, 01 sec, 486 mili
+	Spent to paid and got a coffee: 00 min, 36 sec, 978 mili
+	Spent in the machine coffee queue: 00 min, 35 sec, 463 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 515 mili
+10:32:20 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 53>
+10:32:20 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=55, name=Programmer 56, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:32:20 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 56> got your coffee. 
+	Spent total: 00 min, 39 sec, 628 mili
+	Spent in the pay queue: 00 min, 01 sec, 486 mili
+	Spent to paid and got a coffee: 00 min, 37 sec, 384 mili
+	Spent in the machine coffee queue: 00 min, 36 sec, 117 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 267 mili
+10:32:20 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 58>
+10:32:21 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=53, name=Programmer 53, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:32:21 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 53> got your coffee. 
+	Spent total: 00 min, 40 sec, 991 mili
+	Spent in the pay queue: 00 min, 01 sec, 264 mili
+	Spent to paid and got a coffee: 00 min, 38 sec, 722 mili
+	Spent in the machine coffee queue: 00 min, 36 sec, 960 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 762 mili
+10:32:21 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 54>
+10:32:21 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=58, name=Programmer 58, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:32:21 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 58> got your coffee. 
+	Spent total: 00 min, 41 sec, 138 mili
+	Spent in the pay queue: 00 min, 01 sec, 740 mili
+	Spent to paid and got a coffee: 00 min, 38 sec, 639 mili
+	Spent in the machine coffee queue: 00 min, 37 sec, 132 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 507 mili
+10:32:21 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 55>
+10:32:23 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=56, name=Programmer 54, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:32:23 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 54> got your coffee. 
+	Spent total: 00 min, 42 sec, 509 mili
+	Spent in the pay queue: 00 min, 01 sec, 498 mili
+	Spent to paid and got a coffee: 00 min, 40 sec, 002 mili
+	Spent in the machine coffee queue: 00 min, 38 sec, 485 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 517 mili
+10:32:23 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 60>
+10:32:23 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=57, name=Programmer 55, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:32:23 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 55> got your coffee. 
+	Spent total: 00 min, 42 sec, 654 mili
+	Spent in the pay queue: 00 min, 01 sec, 506 mili
+	Spent to paid and got a coffee: 00 min, 40 sec, 139 mili
+	Spent in the machine coffee queue: 00 min, 38 sec, 628 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 511 mili
+10:32:23 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 59>
+10:32:24 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=60, name=Programmer 60, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:32:24 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 60> got your coffee. 
+	Spent total: 00 min, 43 sec, 781 mili
+	Spent in the pay queue: 00 min, 01 sec, 762 mili
+	Spent to paid and got a coffee: 00 min, 41 sec, 261 mili
+	Spent in the machine coffee queue: 00 min, 39 sec, 991 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 270 mili
+10:32:24 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 62>
+10:32:25 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=59, name=Programmer 59, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:32:25 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 59> got your coffee. 
+	Spent total: 00 min, 44 sec, 414 mili
+	Spent in the pay queue: 00 min, 01 sec, 739 mili
+	Spent to paid and got a coffee: 00 min, 41 sec, 666 mili
+	Spent in the machine coffee queue: 00 min, 39 sec, 908 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 758 mili
+10:32:25 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 61>
+10:32:26 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=62, name=Programmer 62, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:32:26 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 62> got your coffee. 
+	Spent total: 00 min, 45 sec, 047 mili
+	Spent in the pay queue: 00 min, 01 sec, 510 mili
+	Spent to paid and got a coffee: 00 min, 42 sec, 781 mili
+	Spent in the machine coffee queue: 00 min, 41 sec, 024 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 757 mili
+10:32:26 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 66>
+10:32:26 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=61, name=Programmer 61, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:32:26 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 61> got your coffee. 
+	Spent total: 00 min, 45 sec, 441 mili
+	Spent in the pay queue: 00 min, 01 sec, 503 mili
+	Spent to paid and got a coffee: 00 min, 42 sec, 935 mili
+	Spent in the machine coffee queue: 00 min, 41 sec, 418 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 517 mili
+10:32:26 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 63>
+10:32:27 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=66, name=Programmer 66, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:32:27 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 66> got your coffee. 
+	Spent total: 00 min, 46 sec, 546 mili
+	Spent in the pay queue: 00 min, 01 sec, 748 mili
+	Spent to paid and got a coffee: 00 min, 44 sec, 039 mili
+	Spent in the machine coffee queue: 00 min, 42 sec, 529 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 510 mili
+10:32:27 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 65>
+10:32:27 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=63, name=Programmer 63, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:32:27 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 63> got your coffee. 
+	Spent total: 00 min, 46 sec, 696 mili
+	Spent in the pay queue: 00 min, 01 sec, 506 mili
+	Spent to paid and got a coffee: 00 min, 44 sec, 184 mili
+	Spent in the machine coffee queue: 00 min, 42 sec, 923 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 261 mili
+10:32:27 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 64>
+10:32:29 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=64, name=Programmer 65, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:32:29 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 65> got your coffee. 
+	Spent total: 00 min, 47 sec, 818 mili
+	Spent in the pay queue: 00 min, 01 sec, 508 mili
+	Spent to paid and got a coffee: 00 min, 45 sec, 301 mili
+	Spent in the machine coffee queue: 00 min, 44 sec, 034 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 267 mili
+10:32:29 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 70>
+10:32:29 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=65, name=Programmer 64, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:32:29 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 64> got your coffee. 
+	Spent total: 00 min, 48 sec, 206 mili
+	Spent in the pay queue: 00 min, 01 sec, 737 mili
+	Spent to paid and got a coffee: 00 min, 45 sec, 463 mili
+	Spent in the machine coffee queue: 00 min, 43 sec, 953 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 510 mili
+10:32:29 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 67>
+10:32:30 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=67, name=Programmer 70, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:32:30 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 70> got your coffee. 
+	Spent total: 00 min, 49 sec, 075 mili
+	Spent in the pay queue: 00 min, 01 sec, 986 mili
+	Spent to paid and got a coffee: 00 min, 46 sec, 334 mili
+	Spent in the machine coffee queue: 00 min, 45 sec, 076 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 258 mili
+10:32:30 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 71>
+10:32:31 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=68, name=Programmer 67, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:32:31 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 67> got your coffee. 
+	Spent total: 00 min, 49 sec, 972 mili
+	Spent in the pay queue: 00 min, 02 sec, 003 mili
+	Spent to paid and got a coffee: 00 min, 47 sec, 212 mili
+	Spent in the machine coffee queue: 00 min, 45 sec, 446 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 766 mili
+10:32:31 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 68>
+10:32:31 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=71, name=Programmer 71, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:32:31 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 71> got your coffee. 
+	Spent total: 00 min, 50 sec, 101 mili
+	Spent in the pay queue: 00 min, 01 sec, 753 mili
+	Spent to paid and got a coffee: 00 min, 47 sec, 596 mili
+	Spent in the machine coffee queue: 00 min, 46 sec, 086 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 510 mili
+10:32:31 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 73>
+10:32:32 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=69, name=Programmer 68, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:32:32 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 68> got your coffee. 
+	Spent total: 00 min, 51 sec, 240 mili
+	Spent in the pay queue: 00 min, 02 sec, 003 mili
+	Spent to paid and got a coffee: 00 min, 48 sec, 231 mili
+	Spent in the machine coffee queue: 00 min, 46 sec, 967 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 264 mili
+10:32:32 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 69>
+10:32:33 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=73, name=Programmer 73, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:32:33 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 73> got your coffee. 
+	Spent total: 00 min, 51 sec, 604 mili
+	Spent in the pay queue: 00 min, 01 sec, 757 mili
+	Spent to paid and got a coffee: 00 min, 49 sec, 091 mili
+	Spent in the machine coffee queue: 00 min, 47 sec, 581 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 510 mili
+10:32:33 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 72>
+10:32:33 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=70, name=Programmer 69, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:32:33 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 69> got your coffee. 
+	Spent total: 00 min, 52 sec, 504 mili
+	Spent in the pay queue: 00 min, 02 sec, 011 mili
+	Spent to paid and got a coffee: 00 min, 49 sec, 487 mili
+	Spent in the machine coffee queue: 00 min, 48 sec, 226 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 261 mili
+10:32:33 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 78>
+10:32:34 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=72, name=Programmer 72, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:32:34 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 72> got your coffee. 
+	Spent total: 00 min, 52 sec, 885 mili
+	Spent in the pay queue: 00 min, 01 sec, 755 mili
+	Spent to paid and got a coffee: 00 min, 50 sec, 127 mili
+	Spent in the machine coffee queue: 00 min, 48 sec, 861 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 266 mili
+10:32:34 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 80>
+10:32:35 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=74, name=Programmer 78, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:32:35 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 78> got your coffee. 
+	Spent total: 00 min, 53 sec, 518 mili
+	Spent in the pay queue: 00 min, 01 sec, 981 mili
+	Spent to paid and got a coffee: 00 min, 50 sec, 782 mili
+	Spent in the machine coffee queue: 00 min, 49 sec, 262 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 520 mili
+10:32:35 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 79>
+10:32:36 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=75, name=Programmer 80, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:32:36 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 80> got your coffee. 
+	Spent total: 00 min, 54 sec, 627 mili
+	Spent in the pay queue: 00 min, 01 sec, 996 mili
+	Spent to paid and got a coffee: 00 min, 51 sec, 874 mili
+	Spent in the machine coffee queue: 00 min, 50 sec, 115 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 759 mili
+10:32:36 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 74>
+10:32:37 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=76, name=Programmer 79, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:32:37 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 79> got your coffee. 
+	Spent total: 00 min, 55 sec, 290 mili
+	Spent in the pay queue: 00 min, 02 sec, 000 mili
+	Spent to paid and got a coffee: 00 min, 52 sec, 536 mili
+	Spent in the machine coffee queue: 00 min, 50 sec, 768 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 768 mili
+10:32:37 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 77>
+10:32:37 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=77, name=Programmer 74, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:32:37 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 74> got your coffee. 
+	Spent total: 00 min, 56 sec, 151 mili
+	Spent in the pay queue: 00 min, 02 sec, 006 mili
+	Spent to paid and got a coffee: 00 min, 53 sec, 388 mili
+	Spent in the machine coffee queue: 00 min, 51 sec, 870 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 518 mili
+10:32:37 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 76>
+10:32:38 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=79, name=Programmer 77, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:32:38 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 77> got your coffee. 
+	Spent total: 00 min, 56 sec, 555 mili
+	Spent in the pay queue: 00 min, 02 sec, 237 mili
+	Spent to paid and got a coffee: 00 min, 53 sec, 564 mili
+	Spent in the machine coffee queue: 00 min, 52 sec, 304 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 260 mili
+10:32:38 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 82>
+10:32:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=78, name=Programmer 76, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:32:39 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 76> got your coffee. 
+	Spent total: 00 min, 57 sec, 925 mili
+	Spent in the pay queue: 00 min, 02 sec, 236 mili
+	Spent to paid and got a coffee: 00 min, 54 sec, 933 mili
+	Spent in the machine coffee queue: 00 min, 53 sec, 163 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 770 mili
+10:32:39 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 75>
+10:32:39 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=81, name=Programmer 82, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:32:39 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 82> got your coffee. 
+	Spent total: 00 min, 57 sec, 579 mili
+	Spent in the pay queue: 00 min, 01 sec, 770 mili
+	Spent to paid and got a coffee: 00 min, 55 sec, 055 mili
+	Spent in the machine coffee queue: 00 min, 53 sec, 552 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 503 mili
+10:32:39 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 81>
+10:32:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=80, name=Programmer 75, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:32:41 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 75> got your coffee. 
+	Spent total: 00 min, 59 sec, 691 mili
+	Spent in the pay queue: 00 min, 02 sec, 253 mili
+	Spent to paid and got a coffee: 00 min, 56 sec, 434 mili
+	Spent in the machine coffee queue: 00 min, 54 sec, 672 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 762 mili
+10:32:41 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 83>
+10:32:41 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=82, name=Programmer 81, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:32:41 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 81> got your coffee. 
+	Spent total: 00 min, 59 sec, 348 mili
+	Spent in the pay queue: 00 min, 01 sec, 777 mili
+	Spent to paid and got a coffee: 00 min, 56 sec, 563 mili
+	Spent in the machine coffee queue: 00 min, 54 sec, 798 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 765 mili
+10:32:41 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 84>
+10:32:42 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=85, name=Programmer 84, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:32:42 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 84> got your coffee. 
+	Spent total: 01 min, 00 sec, 587 mili
+	Spent in the pay queue: 00 min, 01 sec, 980 mili
+	Spent to paid and got a coffee: 00 min, 57 sec, 601 mili
+	Spent in the machine coffee queue: 00 min, 56 sec, 342 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 259 mili
+10:32:42 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 86>
+10:32:43 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=83, name=Programmer 83, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:32:43 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 83> got your coffee. 
+	Spent total: 01 min, 00 sec, 708 mili
+	Spent in the pay queue: 00 min, 01 sec, 990 mili
+	Spent to paid and got a coffee: 00 min, 57 sec, 712 mili
+	Spent in the machine coffee queue: 00 min, 56 sec, 200 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 512 mili
+10:32:43 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 87>
+10:32:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=84, name=Programmer 87, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:32:44 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 87> got your coffee. 
+	Spent total: 01 min, 01 sec, 962 mili
+	Spent in the pay queue: 00 min, 01 sec, 996 mili
+	Spent to paid and got a coffee: 00 min, 58 sec, 960 mili
+	Spent in the machine coffee queue: 00 min, 57 sec, 696 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 263 mili
+10:32:44 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 88>
+10:32:44 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=86, name=Programmer 86, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:32:44 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 86> got your coffee. 
+	Spent total: 01 min, 02 sec, 352 mili
+	Spent in the pay queue: 00 min, 02 sec, 246 mili
+	Spent to paid and got a coffee: 00 min, 59 sec, 350 mili
+	Spent in the machine coffee queue: 00 min, 57 sec, 585 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 764 mili
+10:32:44 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 89>
+10:32:46 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=89, name=Programmer 88, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:32:46 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 88> got your coffee. 
+	Spent total: 01 min, 03 sec, 723 mili
+	Spent in the pay queue: 00 min, 02 sec, 479 mili
+	Spent to paid and got a coffee: 01 min, 00 sec, 488 mili
+	Spent in the machine coffee queue: 00 min, 58 sec, 731 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 757 mili
+10:32:46 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 85>
+10:32:46 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=90, name=Programmer 89, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:32:46 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 89> got your coffee. 
+	Spent total: 01 min, 04 sec, 118 mili
+	Spent in the pay queue: 00 min, 02 sec, 499 mili
+	Spent to paid and got a coffee: 01 min, 00 sec, 863 mili
+	Spent in the machine coffee queue: 00 min, 59 sec, 100 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 763 mili
+10:32:46 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 90>
+10:32:47 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=87, name=Programmer 85, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:32:47 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 85> got your coffee. 
+	Spent total: 01 min, 05 sec, 493 mili
+	Spent in the pay queue: 00 min, 02 sec, 256 mili
+	Spent to paid and got a coffee: 01 min, 02 sec, 229 mili
+	Spent in the machine coffee queue: 01 min, 00 sec, 466 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 763 mili
+10:32:47 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 92>
+10:32:48 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=88, name=Programmer 90, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:32:48 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 90> got your coffee. 
+	Spent total: 01 min, 05 sec, 889 mili
+	Spent in the pay queue: 00 min, 02 sec, 480 mili
+	Spent to paid and got a coffee: 01 min, 02 sec, 404 mili
+	Spent in the machine coffee queue: 01 min, 00 sec, 637 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 767 mili
+10:32:48 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 91>
+10:32:49 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=92, name=Programmer 92, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:32:49 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 92> got your coffee. 
+	Spent total: 01 min, 06 sec, 281 mili
+	Spent in the pay queue: 00 min, 02 sec, 253 mili
+	Spent to paid and got a coffee: 01 min, 03 sec, 269 mili
+	Spent in the machine coffee queue: 01 min, 02 sec, 003 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 266 mili
+10:32:49 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 93>
+10:32:49 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=91, name=Programmer 91, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:32:49 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 91> got your coffee. 
+	Spent total: 01 min, 06 sec, 923 mili
+	Spent in the pay queue: 00 min, 02 sec, 020 mili
+	Spent to paid and got a coffee: 01 min, 03 sec, 895 mili
+	Spent in the machine coffee queue: 01 min, 02 sec, 386 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 509 mili
+10:32:49 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 95>
+10:32:50 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=93, name=Programmer 93, coffeType=ESPRESSO, paymenthMethod=CASH]]
+10:32:50 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 93> got your coffee. 
+	Spent total: 01 min, 07 sec, 537 mili
+	Spent in the pay queue: 00 min, 02 sec, 258 mili
+	Spent to paid and got a coffee: 01 min, 04 sec, 523 mili
+	Spent in the machine coffee queue: 01 min, 03 sec, 254 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 268 mili
+10:32:50 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 98>
+10:32:51 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=94, name=Programmer 95, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:32:51 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 95> got your coffee. 
+	Spent total: 01 min, 08 sec, 413 mili
+	Spent in the pay queue: 00 min, 02 sec, 252 mili
+	Spent to paid and got a coffee: 01 min, 05 sec, 406 mili
+	Spent in the machine coffee queue: 01 min, 03 sec, 894 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 512 mili
+10:32:51 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 100>
+10:32:51 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=96, name=Programmer 98, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:32:51 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 98> got your coffee. 
+	Spent total: 01 min, 09 sec, 045 mili
+	Spent in the pay queue: 00 min, 02 sec, 481 mili
+	Spent to paid and got a coffee: 01 min, 05 sec, 805 mili
+	Spent in the machine coffee queue: 01 min, 04 sec, 289 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 516 mili
+10:32:51 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 94>
+10:32:53 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=97, name=Programmer 100, coffeType=CAPPUCCINO, paymenthMethod=CASH]]
+10:32:53 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 100> got your coffee. 
+	Spent total: 01 min, 10 sec, 181 mili
+	Spent in the pay queue: 00 min, 02 sec, 498 mili
+	Spent to paid and got a coffee: 01 min, 06 sec, 928 mili
+	Spent in the machine coffee queue: 01 min, 05 sec, 161 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 767 mili
+10:32:53 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 96>
+10:32:53 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=95, name=Programmer 94, coffeType=LATTE_MACCHIATO, paymenthMethod=CREDIT]]
+10:32:53 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 94> got your coffee. 
+	Spent total: 01 min, 10 sec, 565 mili
+	Spent in the pay queue: 00 min, 02 sec, 476 mili
+	Spent to paid and got a coffee: 01 min, 07 sec, 080 mili
+	Spent in the machine coffee queue: 01 min, 05 sec, 565 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 515 mili
+10:32:53 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 99>
+10:32:54 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=100, name=Programmer 96, coffeType=LATTE_MACCHIATO, paymenthMethod=CASH]]
+10:32:54 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 96> got your coffee. 
+	Spent total: 01 min, 11 sec, 696 mili
+	Spent in the pay queue: 00 min, 02 sec, 737 mili
+	Spent to paid and got a coffee: 01 min, 08 sec, 200 mili
+	Spent in the machine coffee queue: 01 min, 06 sec, 690 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 510 mili
+10:32:54 DEBUG c.s.g.r.GetCoffeeInMachineReceiver:59 - Received in a machine to get a coffee: <Programmer 97>
+10:32:54 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver46, programmer=Programmer [id=98, name=Programmer 99, coffeType=ESPRESSO, paymenthMethod=CREDIT]]
+10:32:54 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 99> got your coffee. 
+	Spent total: 01 min, 11 sec, 825 mili
+	Spent in the pay queue: 00 min, 02 sec, 500 mili
+	Spent to paid and got a coffee: 01 min, 08 sec, 320 mili
+	Spent in the machine coffee queue: 01 min, 07 sec, 060 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 260 mili
+10:32:56 DEBUG c.s.g.r.StatisticsReceiver:44 - Saving statistic: Statistic [id=null, machine=com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver45, programmer=Programmer [id=99, name=Programmer 97, coffeType=CAPPUCCINO, paymenthMethod=CREDIT]]
+10:32:56 INFO  c.s.g.r.GetCoffeeInMachineReceiver:100 - 
+User <Programmer 97> got your coffee. 
+	Spent total: 01 min, 13 sec, 460 mili
+	Spent in the pay queue: 00 min, 02 sec, 503 mili
+	Spent to paid and got a coffee: 01 min, 09 sec, 950 mili
+	Spent in the machine coffee queue: 01 min, 08 sec, 189 mili
+	Spent to got the coffee in machine: 00 min, 01 sec, 761 mili
+10:32:56 INFO  c.s.g.Application:57 - Started Application in 82.413 seconds (JVM running for 82.876)
+10:37:04 INFO  o.s.c.a.AnnotationConfigApplicationContext:960 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7364985f: startup date [Fri Jan 15 10:31:34 CET 2016]; root of context hierarchy
+10:37:04 INFO  o.s.c.s.DefaultLifecycleProcessor:356 - Stopping beans in phase 2147483647
+10:37:04 INFO  o.s.a.r.l.SimpleMessageListenerContainer:815 - Waiting for workers to finish.
+10:37:04 INFO  o.s.a.r.l.SimpleMessageListenerContainer:818 - Successfully waited for workers to finish.
+10:37:04 INFO  o.s.a.r.l.SimpleMessageListenerContainer:815 - Waiting for workers to finish.
+10:37:05 INFO  o.s.a.r.l.SimpleMessageListenerContainer:818 - Successfully waited for workers to finish.
+10:37:05 INFO  o.s.a.r.l.SimpleMessageListenerContainer:815 - Waiting for workers to finish.
+10:37:05 INFO  o.s.a.r.l.SimpleMessageListenerContainer:818 - Successfully waited for workers to finish.
+10:37:05 INFO  o.s.a.r.l.SimpleMessageListenerContainer:815 - Waiting for workers to finish.
+10:37:06 INFO  o.s.a.r.l.SimpleMessageListenerContainer:818 - Successfully waited for workers to finish.
+10:37:06 INFO  o.s.j.e.a.AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+10:37:06 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+10:37:06 INFO  o.h.t.h.SchemaExport:344 - HHH000227: Running hbm2ddl schema export
+10:37:06 INFO  o.h.t.h.SchemaExport:406 - HHH000230: Schema export complete

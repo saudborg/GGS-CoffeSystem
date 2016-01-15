@@ -1,5 +1,10 @@
 package com.sauloborges.ggs.constants;
 
+/**
+ * Name of the queues using in the system
+ * @author sauloborges
+ *
+ */
 public class QueueConstants {
 	
 	public static final String CHOOSE_COFFEE_QUEUE = "choose-coffee-queue";

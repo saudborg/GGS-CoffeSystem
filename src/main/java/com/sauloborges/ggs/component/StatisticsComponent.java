@@ -1,4 +1,4 @@
-package com.sauloborges.ggs;
+package com.sauloborges.ggs.component;
 
 import static com.sauloborges.ggs.util.Utils.formatTime;
 
@@ -15,6 +15,11 @@ import com.sauloborges.ggs.receiver.GetCoffeeInMachineReceiver;
 import com.sauloborges.ggs.repository.ProgrammerRepository;
 import com.sauloborges.ggs.repository.StatisticRepository;
 
+/**
+ * Class represent the results of the challenge
+ * @author sauloborges
+ *
+ */
 @Component
 public class StatisticsComponent {
 
@@ -24,8 +29,15 @@ public class StatisticsComponent {
 	@Autowired
 	private ProgrammerRepository programmerRepository;
 	
+	/**
+	 * Variable to set if the statistics is already done
+	 */
 	private boolean statsDone = false;
 
+	/**
+	 * This method will show how much coffee is sold (total and per payment type)
+	 * @return
+	 */
 	public String howMuchCoffeIsSold() {
 		int totalCoffeSold = 0;
 		int totalPaidInCash = 0;
@@ -54,6 +66,10 @@ public class StatisticsComponent {
 
 	}
 
+	/**
+	 * This method will show how much coffee is dispensed by each coffee machine (total and per type of coffee)
+	 * @return
+	 */
 	public String howMuchCoffeIsDispensedByEachCoffeeMachine() {
 
 		List<String> listNameMachine = statisticRepository.getListNameMachine(GetCoffeeInMachineReceiver.class.getName());
@@ -112,6 +128,10 @@ public class StatisticsComponent {
 		return sb.toString();
 	}
 
+	/**
+	 * This method will show how much time does the average programmer spend getting her coffee
+	 * @return
+	 */
 	public String howMuchTimeDoesTheAverageProgrammerSpendGettingHerCoffee() {
 
 		List<Programmer> programmers = programmerRepository.findAll();
@@ -148,30 +168,18 @@ public class StatisticsComponent {
 		return sb.toString();
 	}
 
+	/**
+	 * This method will show how long did it take the fastest and the slowest programmer to get her coffee
+	 * @return
+	 */
 	public String howLongDidItTakeTheFastestAndTheSlowestProgrammerToGetHerCoffee() {
 
 		Programmer fastestGeral;
 		Programmer slowestGeral;
-//		Programmer fastestInPayQueue;
-//		Programmer fastestToPaidAndGotACoffee;
-//		Programmer fastestInMachineCoffeeQueue;
-//		Programmer fastestInCoffeeMachine;
-//		Programmer slowestInPayQueue;
-//		Programmer slowestToPaidAndGotACoffee;
-//		Programmer slowestInMachineCoffeeQueue;
-//		Programmer slowestInCoffeeMachine;
 
 		List<Programmer> programmers = programmerRepository.findAll();
 		fastestGeral = programmers.get(0);
 		slowestGeral = programmers.get(0);
-//		fastestInPayQueue = programmers.get(0);
-//		fastestToPaidAndGotACoffee = programmers.get(0);
-//		fastestInMachineCoffeeQueue = programmers.get(0);
-//		fastestInCoffeeMachine = programmers.get(0);
-//		slowestInPayQueue = programmers.get(0);
-//		slowestToPaidAndGotACoffee = programmers.get(0);
-//		slowestInMachineCoffeeQueue = programmers.get(0);
-//		slowestInCoffeeMachine = programmers.get(0);
 
 		long timeFastest = fastestGeral.getTimeFinished() - fastestGeral.getTimeStarted();
 		long timeSlowest = fastestGeral.getTimeFinished() - fastestGeral.getTimeStarted();
