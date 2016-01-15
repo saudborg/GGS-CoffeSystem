@@ -46,7 +46,7 @@ The system was developed using the concept of queues, where each machine represe
 
 ## Results
 Here you can see the results and how was the executation of each test 
-- [100 programmers]()
-- [200 programmers]()
-- [500 programmers]()
-- [1000 programmers]()
+- [100 programmers](https://github.com/saudborg/GGS-CoffeeSystem/tree/master/results/100%20programmers)
+- [200 programmers](https://github.com/saudborg/GGS-CoffeeSystem/tree/master/results/200%20programmers)
+- [500 programmers](https://github.com/saudborg/GGS-CoffeeSystem/tree/master/results/500%20programmers)
+- [1000 programmers](https://github.com/saudborg/GGS-CoffeeSystem/tree/master/results/1000%20programmers)
