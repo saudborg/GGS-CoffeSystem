@@ -1,7 +1,7 @@
 # GGS-CoffeeSystem
 This project was developed for GGS. It represents a system that allows programmers to get coffee and pay for it.
 
-### Prerequisities
+### Pre requisities
 - [Apache Maven](https://maven.apache.org/index.html)
 - [RabbitMQ](https://www.rabbitmq.com/)
 
@@ -9,7 +9,7 @@ This project was developed for GGS. It represents a system that allows programme
 - Java 1.8
 - Maven 3.2.1
 - RabbitMQ
-- Spring Boot (AMPQ, JPA, TEST)
+- Spring Boot (AMQP, JPA, TEST)
 - HSQLDB
 - JUnit
 
@@ -19,7 +19,7 @@ This project was developed for GGS. It represents a system that allows programme
 - Starts the [RabbitMq Server](https://www.rabbitmq.com/install-generic-unix.html)
 
 ### How to use 
-To exectute the system you just have to run [Application.java](https://github.com/saudborg/GGS-CoffeeSystem/blob/master/src/main/java/com/sauloborges/ggs/Application.java).
+To execute the system you need run [Application.java](https://github.com/saudborg/GGS-CoffeeSystem/blob/master/src/main/java/com/sauloborges/ggs/Application.java).
 The system will read the variables on application.context like: 
 - How many programmers would you like to test? EX: 100, 200, 500, 1000
 - Would you like to print details about each step? EX:
